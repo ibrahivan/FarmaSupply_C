@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DAL.Migrations
 {
     [DbContext(typeof(FarmasupplyContext))]
-    [Migration("20240207184022_inicial5")]
-    partial class inicial5
+    [Migration("20240208072730_inicial6")]
+    partial class inicial6
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

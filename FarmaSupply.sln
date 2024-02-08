@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmaSupply", "FarmaSupply\FarmaSupply.csproj", "{7A12B29C-F0B9-4A4B-BABF-8C7164D5E24C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FarmaSupply", "FarmaSupply\FarmaSupply.csproj", "{7A12B29C-F0B9-4A4B-BABF-8C7164D5E24C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{53035767-89F6-44A4-B870-D28116FC9C8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{53035767-89F6-44A4-B870-D28116FC9C8E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

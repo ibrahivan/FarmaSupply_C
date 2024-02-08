@@ -1,0 +1,169 @@
+﻿@{
+    ViewData["Title"] = "login";
+    var mensajeRegistroExitoso = ViewData["MensajeRegistroExitoso"] as string;
+    var cuentaVerificada = ViewData["CuentaVerificada"] as string;
+    var cuentaNoVerificada = ViewData["EmailNoConfirmado"] as string;
+    var yaEstabaVerificada = ViewData["yaEstabaVerificada"] as string;
+    var mensajeExitoMail = ViewData["MensajeExitoMail"] as string;
+    var contraseñaModificada = ViewData["ContraseñaModificadaExito"] as string;
+    var mensajeErrorInicioSesion = ViewData["MensajeErrorInicioSesion"] as string;
+    var recursoProhibido = ViewData["RecursoProhibido"] as string;
+    var error = ViewData["error"] as string;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="~/script/script1.js" asp-append-version="true"></script>
+    <script src="~/script/modernizr.js" asp-append-version="true"></script>
+</head>
+
+<body>
+    <section id="navigation-bar" class="navigation position-fixed">
+        <nav id="navbar-example2" class="navbar navbar-expand-lg ">
+            <div class="navigation container-fluid d-flex flex-wrap align-items-center my-2 pe-4 ps-5 ">
+                <div class="col-md-3 brand-logo">
+                    <a asp-page="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+                        <h2>FarmaSupply</h2>
+                    </a>
+                </div>
+                <div class="offcanvas-body ">
+                    <ul class="navbar-nav  flex-grow-1">
+                        <li class="nav-list mx-3">
+                            <a asp-page="/" class="nav-link px-2">
+                                <h5> Volver </h5>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section id="hero">
+        <div class="hero container py-5 my-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 mt-2 py-5">
+                <div class="col-10 col-sm-8 col-lg-6 py-md-5 my-md-5">
+                    <img src="~/css/assets/scooter.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                        width="700" height="500" loading="lazy">
+                </div>
+                <div class="col-lg-6 py-md-5 my-md-5">
+                    <form id="loginForm" class="form-group flex-wrap p-3" method="POST" asp-page="/auth/login-post"
+                        role="form">
+                        <div class="form-input col-lg-12 my-4">
+                            <label for="emailUsuario"
+                                class="form-label fs-6 text-uppercase fw-bold text-black">Email</label>
+                            <input id="login-username" type="email" class="form-control ps-3" name="username" required>
+                        </div>
+                        <div class="form-input col-lg-12 my-4">
+                            <label for="claveUsuario"
+                                class="form-label fs-6 text-uppercase fw-bold text-black">Contraseña</label>
+                            <input id="login-password" type="password" class="form-control ps-3" name="password"
+                                required>
+                        </div>
+                        <div class="d-grid my-3">
+                            <button class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6"
+                                type="submit" id="btnAcceder">Acceder</button>
+                        </div>
+                    </form>
+                    <div class="d-grid my-3">
+                        <form id="registroForm" class="form-group flex-wrap p-3" method="GET" asp-page="/auth/registrar">
+                            <button type="submit"
+                                class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">Registrarse</button>
+                        </form>
+                    </div>
+                    <div class="d-grid my-3">
+                        <form id="recuperacionForm" class="form-group flex-wrap p-3" asp-page="/auth/iniciarRecuperacion"
+                            method="get">
+                            <button type="submit"
+                                class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">Recuperar
+                                contraseña</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @if (!string.IsNullOrEmpty(mensajeRegistroExitoso))
+    {
+        <script>
+            mostrarNotificacion("¡Email de confirmación enviado!", "Revise su bandeja de entrada y confirme su cuenta de correo electrónico.", 'info');
+        </script>
+    }
+
+    @if (!string.IsNullOrEmpty(cuentaVerificada))
+    {
+        <script>
+            mostrarNotificacion("¡Cuenta verificada!", "La cuenta ha sido confirmada correctamente. Ya puede iniciar sesión", 'success');
+        </script>
+    }
+    @if (!string.IsNullOrEmpty(cuentaNoVerificada))
+    {
+        <script>
+            mostrarNotificacion("¡Debe confirmar su correo electrónico!", "Para poder iniciar sesión, antes debe confirmar su cuenta de correo electrónico. Revise su bandeja de entrada", 'error');
+        </script>
+    }
+    @if (!string.IsNullOrEmpty(mensajeExitoMail))
+    {
+        <script>
+            mostrarNotificacion("¡Email de recuperación enviado!", "Revise su bandeja de entrada y sigua las instrucciones para restablecer su contraseña", 'info');
+        </script>
+    }
+    @if (!string.IsNullOrEmpty(yaEstabaVerificada))
+    {
+        <script>
+            mostrarNotificacion("¡Se encuentra registrado y vericado!", "Puede acceder y hacer uso de su cuenta", 'info');
+        </script>
+    }
+    @if (!string.IsNullOrEmpty(contraseñaModificada))
+    {
+        <script>
+            mostrarNotificacion("¡Contraseña modificada con exito!", "Ya puede iniciar sesión con su nueva contraseña", 'success');
+        </script>
+    }
+    @if (!string.IsNullOrEmpty(mensajeErrorInicioSesion))
+    {
+        <script>
+            mostrarNotificacion("¡No se pudo iniciar sesión!", "Credenciales introducidas incorrectas o cuenta de email no verificada", 'error');
+        </script>
+    }
+    @if (!string.IsNullOrEmpty(recursoProhibido))
+    {
+        <script>
+            mostrarNotificacion("¡Prohibido!", "No tiene permiso para acceder a este recurso", 'error');
+
+        </script>
+    }
+    @if (!string.IsNullOrEmpty(error))
+    {
+        <script>
+            mostrarNotificacion("¡Error!", "Ocurrio un error no esperado, intentelo de nuevo", 'error');
+        </script>
+    }
+
+
+    <script src="~/script/jquery-1.11.0.min.js"></script>
+    <script src="~/script/plugins.js"></script>
+    <script src="~/script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+</body>
+
+</html>
+
