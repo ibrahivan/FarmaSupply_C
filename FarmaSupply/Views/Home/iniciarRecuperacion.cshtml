@@ -1,5 +1,67 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model FarmaSupply.DTO.UsuarioDTO
 @{
+    var mensajeErrorEmail = ViewData["MensajeErrorMail"] as string;
+    var contraseñaModificadaError = ViewData["ContraseñaModificadaError"] as string;
+    var mensajeErrorTokenValidez = ViewData["MensajeErrorTokenValidez"] as string;
+    var mensajeErrorTokenExpirado = ViewData["MensajeErrorTokenExpirado"] as string;
+    var error = ViewData["error"] as string;
 }
+
+    <!-- Hero Section Starts -->
+    <section id="hero">
+        <div class="hero container py-5 my-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 mt-2 py-5">
+                <div class="col-10 col-sm-8 col-lg-6 py-md-5 my-md-5">
+                    <img src="~/css/assets/scooter.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                        width="700" height="500" loading="lazy">
+                </div>
+                <div class="col-lg-6 py-md-5 my-md-5">
+                    <p class="titulo">Restablecer la contraseña</p>
+                <form asp-action="ProcesarInicioRecuperacion" method="post" class="form-group flex-wrap p-3">
+
+                        <div class="form-input col-lg-12 my-4">
+                        <label for="EmailUsuario" class="form-label fs-6 text-uppercase fw-bold text-black">Correo electrónico</label>
+                        <input type="email" name="EmailUsuario" class="form-control ps-3" id="EmailUsuario" required />
+                        </div>
+                        <div class="d-grid my-3">
+                            <button class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6"
+                                type="submit" id="btnRegistro">Recuperar</button>
+                        </div>
+                        <div class="mi-recuadro">
+                            <div>Le enviaremos un correo electrónico con un enlace para modificar su contraseña.</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        @if (!string.IsNullOrEmpty(contraseñaModificadaError))
+        {
+            <script>
+                mostrarNotificacion("¡Error!", "Ha ocurrido un error al reestablecer la contraseña", 'error');
+            </script>
+        }
+        @if (!string.IsNullOrEmpty(mensajeErrorEmail))
+        {
+            <script>
+                mostrarNotificacion("¡Cuenta de correo electrónico no encontrada!", "Se ha producido un error en el proceso de recuperación, por favor revise la información ingresada.", 'error');
+            </script>
+        }
+        @if (!string.IsNullOrEmpty(mensajeErrorTokenValidez))
+        {
+            <script>
+                mostrarNotificacion("¡El enlace no es válido!", "Si necesita restablecer su contraseña, inicie el proceso de recuperación de nuevo", 'error');
+            </script>
+        }
+        @if (!string.IsNullOrEmpty(mensajeErrorTokenExpirado))
+        {
+            <script>
+                mostrarNotificacion("¡El enlace ha caducado!", "Por favor, vuelva iniciar el proceso de solicitar la recuperación de contraseña", 'error');
+            </script>
+        }
+        @if (!string.IsNullOrEmpty(error))
+        {
+            <script>
+                mostrarNotificacion("¡Error!", "Ocurrio un error no esperado, intentelo de nuevo", 'error');
+            </script>
+        }
+    </section>

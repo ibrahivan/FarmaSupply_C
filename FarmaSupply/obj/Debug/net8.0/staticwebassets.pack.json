@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Puesto12\\Desktop\\WK VS\\FarmaSupply_C\\FarmaSupply\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\FarmaSupply.bundle.scp.css",
-      "PackagePath": "staticwebassets\\FarmaSupply.bundle.scp.css"
-    },
-    {
       "Id": "C:\\Users\\Puesto12\\Desktop\\WK VS\\FarmaSupply_C\\FarmaSupply\\wwwroot\\css\\assets\\default.png",
       "PackagePath": "staticwebassets\\css\\assets\\default.png"
     },

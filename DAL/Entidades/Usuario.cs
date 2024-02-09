@@ -60,7 +60,7 @@ namespace DAL.Entidades
         public string Rol { get; set; }
 
         [Column("cuenta_confirmada")]
-        public bool CuentaConfirmada { get; set; }
+        public bool CuentaConfirmada { get; set; } = false;
 
         [Column("foto_usuario")]
         public byte[] Foto { get; set; }

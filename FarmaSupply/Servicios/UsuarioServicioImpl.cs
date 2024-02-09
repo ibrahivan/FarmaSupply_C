@@ -28,6 +28,8 @@ namespace FarmaSupply.Servicios
             _convertirAdto = convertirAdto;
             _servicioEmail = servicioEmail;
         }
+
+        
         public UsuarioDTO registrarUsuario(UsuarioDTO userDTO)
         {
             try
@@ -394,18 +396,26 @@ namespace FarmaSupply.Servicios
             throw new NotImplementedException();
         }
 
-       
+
 
         public string convertToBase64(byte[] data)
         {
-            throw new NotImplementedException();
+            if (data != null && data.Length > 0)
+            {
+                return Convert.ToBase64String(data);
+            }
+            return null;
         }
+
 
         public byte[] convertToByteArray(string base64String)
         {
-            throw new NotImplementedException();
+            if (!string.IsNullOrEmpty(base64String))
+            {
+                return Convert.FromBase64String(base64String);
+            }
+            return null;
         }
-
 
     }
 }

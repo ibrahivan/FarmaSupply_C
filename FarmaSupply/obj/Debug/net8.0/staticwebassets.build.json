@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KAK4U1oziKz37lO+FxzAuu5ezgpk7iDKJkIg2if5joU=",
+  "Hash": "g5CqbFf16Og6IhkhAfsvHYUrSYwdM3xlZ7MRJ8WMBfs=",
   "Source": "FarmaSupply",
   "BasePath": "_content/FarmaSupply",
   "Mode": "Default",
@@ -72,25 +72,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Puesto12\\Desktop\\WK VS\\FarmaSupply_C\\FarmaSupply\\obj\\Debug\\net8.0\\scopedcss\\bundle\\FarmaSupply.styles.css"
-    },
-    {
-      "Identity": "C:\\Users\\Puesto12\\Desktop\\WK VS\\FarmaSupply_C\\FarmaSupply\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\FarmaSupply.bundle.scp.css",
-      "SourceId": "FarmaSupply",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Puesto12\\Desktop\\WK VS\\FarmaSupply_C\\FarmaSupply\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
-      "BasePath": "_content/FarmaSupply",
-      "RelativePath": "FarmaSupply.bundle.scp.css",
-      "AssetKind": "All",
-      "AssetMode": "Reference",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ProjectBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Puesto12\\Desktop\\WK VS\\FarmaSupply_C\\FarmaSupply\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\FarmaSupply.bundle.scp.css"
     },
     {
       "Identity": "C:\\Users\\Puesto12\\Desktop\\WK VS\\FarmaSupply_C\\FarmaSupply\\wwwroot\\css\\assets\\default.png",

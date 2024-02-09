@@ -1,8 +1,9 @@
 
 using DAL.Entidades;
+using FarmaSupply.Servicios;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
-using System.Configuration;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,13 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<FarmasupplyContext>(options =>
      options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnection")));
+
+
+builder.Services.AddScoped<IUsuarioServicio, UsuarioServicioImpl>();
+builder.Services.AddScoped<IServicioEncriptar, EncriptarServicioImpl>();
+builder.Services.AddScoped<IConvertirAdto, ConvertirAdtoImpl>();
+builder.Services.AddScoped<IConvertirAdao, ConvertirAdaoImpl>();
+builder.Services.AddScoped<IServicioEmail, EmailServicioImpl>();
 
 
 builder.Services.AddAuthentication(options =>

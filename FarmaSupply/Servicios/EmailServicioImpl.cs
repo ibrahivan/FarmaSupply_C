@@ -13,7 +13,7 @@ namespace FarmaSupply.Servicios
 
                 string urlDominio = "https://localhost:7142";
 
-                string EmailOrigen = "nikoalvarezzapata@gmail.com";
+                string EmailOrigen = "ivan.vazquez.cod@gmail.com";
                 //Se crea la URL de recuperación con el token que se enviará al mail del user.
                 string urlDeRecuperacion = String.Format("{0}/auth/confirmar-cuenta/?token={1}", urlDominio, token);
 
@@ -24,7 +24,7 @@ namespace FarmaSupply.Servicios
                 //Asignamos el nombre de usuario que tendrá el cuerpo del mail y el URL de recuperación con el token al HTML.
                 htmlContent = String.Format(htmlContent, nombreUsuario, urlDeRecuperacion);
 
-                MailMessage mensajeDelCorreo = new MailMessage(EmailOrigen, emailDestino, "CONFIRMAR EMAIL BIKERCONNECT", htmlContent);
+                MailMessage mensajeDelCorreo = new MailMessage(EmailOrigen, emailDestino, "CONFIRMAR EMAIL FARMASUPPLY", htmlContent);
 
                 mensajeDelCorreo.IsBodyHtml = true;
 

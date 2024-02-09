@@ -71,7 +71,7 @@ namespace FarmaSupply.Controllers
                     HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(identidadDeReclamaciones));
 
                     EscribirLog.escribirEnFicheroLog("[INFO] Saliendo del método ProcesarInicioSesion() de la clase LoginController");
-                    return RedirectToAction("Dashboard", "Login");
+                    return RedirectToAction("Home", "Login");
                 }
                 else
                 {
@@ -123,11 +123,11 @@ namespace FarmaSupply.Controllers
 
         [Authorize]
         [HttpGet]
-        [Route("/privada/dashboard")]
-        public IActionResult Dashboard()
+        [Route("/privada/home")]
+        public IActionResult Home()
         {
-            EscribirLog.escribirEnFicheroLog("[INFO] Entrando en el método Dashboard() de la clase LoginController");
-            return View("~/Views/Home/dashboard.cshtml");
+            EscribirLog.escribirEnFicheroLog("[INFO] Entrando en el método Home() de la clase LoginController");
+            return View("~/Views/Home/home.cshtml");
         }
 
         [HttpPost]

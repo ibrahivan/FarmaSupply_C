@@ -717,9 +717,7 @@ C:\Users\Puesto12\Desktop\WK VS\FarmaSupply_C\FarmaSupply\obj\Debug\net8.0\stati
 C:\Users\Puesto12\Desktop\WK VS\FarmaSupply_C\FarmaSupply\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.FarmaSupply.props
 C:\Users\Puesto12\Desktop\WK VS\FarmaSupply_C\FarmaSupply\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.FarmaSupply.props
 C:\Users\Puesto12\Desktop\WK VS\FarmaSupply_C\FarmaSupply\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\Puesto12\Desktop\WK VS\FarmaSupply_C\FarmaSupply\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\Puesto12\Desktop\WK VS\FarmaSupply_C\FarmaSupply\obj\Debug\net8.0\scopedcss\bundle\FarmaSupply.styles.css
-C:\Users\Puesto12\Desktop\WK VS\FarmaSupply_C\FarmaSupply\obj\Debug\net8.0\scopedcss\projectbundle\FarmaSupply.bundle.scp.css
 C:\Users\Puesto12\Desktop\WK VS\FarmaSupply_C\FarmaSupply\obj\Debug\net8.0\FarmaSupply.csproj.CopyComplete
 C:\Users\Puesto12\Desktop\WK VS\FarmaSupply_C\FarmaSupply\obj\Debug\net8.0\FarmaSupply.dll
 C:\Users\Puesto12\Desktop\WK VS\FarmaSupply_C\FarmaSupply\obj\Debug\net8.0\refint\FarmaSupply.dll
