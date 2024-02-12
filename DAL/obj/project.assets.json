@@ -2296,19 +2296,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Puesto12\\.nuget\\packages\\": {}
+    "C:\\Users\\ivan-\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Puesto12\\Desktop\\WK VS\\FarmaSupply_C\\DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\Users\\ivan-\\OneDrive\\Escritorio\\FarmaSupply_C\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "C:\\Users\\Puesto12\\Desktop\\WK VS\\FarmaSupply_C\\DAL\\DAL.csproj",
-      "packagesPath": "C:\\Users\\Puesto12\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Puesto12\\Desktop\\WK VS\\FarmaSupply_C\\DAL\\obj\\",
+      "projectPath": "C:\\Users\\ivan-\\OneDrive\\Escritorio\\FarmaSupply_C\\DAL\\DAL.csproj",
+      "packagesPath": "C:\\Users\\ivan-\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ivan-\\OneDrive\\Escritorio\\FarmaSupply_C\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Puesto12\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ivan-\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

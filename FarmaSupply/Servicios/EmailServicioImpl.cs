@@ -15,7 +15,7 @@ namespace FarmaSupply.Servicios
 
                 string EmailOrigen = "ivan.vazquez.cod@gmail.com";
                 //Se crea la URL de recuperación con el token que se enviará al mail del user.
-                string urlDeRecuperacion = String.Format("{0}/auth/confirmar-cuenta/?token={1}", urlDominio, token);
+                string urlDeRecuperacion = String.Format("{0}/auth/confirmar-cuenta?token={1}", urlDominio, token);
 
                 //Hacemos que el texto del email sea un archivo html que se encuentra en la carpeta Plantilla.
                 string directorioProyecto = System.IO.Directory.GetCurrentDirectory();
@@ -62,7 +62,7 @@ namespace FarmaSupply.Servicios
 
                 string EmailOrigen = "ivan.vazquez.cod@gmail.com";
                 //Se crea la URL de recuperación con el token que se enviará al mail del user.
-                string urlDeRecuperacion = String.Format("{0}/auth/recuperar/?token={1}", urlDominio, token);
+                string urlDeRecuperacion = String.Format("{0}/auth/recuperar?token={1}", urlDominio, token);
 
                 //Hacemos que el texto del email sea un archivo html que se encuentra en la carpeta Plantilla.
                 string directorioProyecto = System.IO.Directory.GetCurrentDirectory();

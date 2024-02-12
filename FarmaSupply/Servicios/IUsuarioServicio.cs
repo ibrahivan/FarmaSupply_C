@@ -39,8 +39,6 @@ namespace FarmaSupply.Servicios
         /// <param name="dni">DNI del usuario que se quiere encontrar</param>
         /// <returns>True si el usuario existe, false en caso contrario</returns>
 
-        public bool buscarPorDni(String dni);
-
         public List<UsuarioDTO> obtenerTodosLosUsuarios();
 
         /// <summary>

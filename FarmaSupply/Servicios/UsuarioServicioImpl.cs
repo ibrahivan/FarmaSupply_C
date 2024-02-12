@@ -145,6 +145,7 @@ namespace FarmaSupply.Servicios
             }
         }
 
+
         public bool iniciarProcesoRecuperacion(string emailUsuario)
         {
             try
@@ -391,11 +392,7 @@ namespace FarmaSupply.Servicios
             return _contexto.Usuarios.Count(u => u.Rol == rol);
         }
 
-        public bool buscarPorDni(string dni)
-        {
-            throw new NotImplementedException();
-        }
-
+     
 
 
         public string convertToBase64(byte[] data)

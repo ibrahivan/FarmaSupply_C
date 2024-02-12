@@ -89,6 +89,11 @@ namespace FarmaSupply.Controllers
         }
 
 
+        /// <summary>
+        /// Método para confirmar la cuenta (su dirección de correo electrónico) del usuario.
+        /// </summary>
+        /// <param name="token"> Token asociado a la confirmación de la cuenta</param>
+        /// <returns>La vista de login</returns>
         [HttpGet]
         [Route("/auth/confirmar-cuenta")]
         public IActionResult ConfirmarCuenta([FromQuery] string token)
@@ -120,6 +125,7 @@ namespace FarmaSupply.Controllers
                 return View("~/Views/Home/login.cshtml");
             }
         }
+
 
         [Authorize]
         [HttpGet]

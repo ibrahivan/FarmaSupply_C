@@ -6732,19 +6732,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Puesto12\\.nuget\\packages\\": {}
+    "C:\\Users\\ivan-\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Puesto12\\Desktop\\WK VS\\FarmaSupply_C\\FarmaSupply\\FarmaSupply.csproj",
+      "projectUniqueName": "C:\\Users\\ivan-\\OneDrive\\Escritorio\\FarmaSupply_C\\FarmaSupply\\FarmaSupply.csproj",
       "projectName": "FarmaSupply",
-      "projectPath": "C:\\Users\\Puesto12\\Desktop\\WK VS\\FarmaSupply_C\\FarmaSupply\\FarmaSupply.csproj",
-      "packagesPath": "C:\\Users\\Puesto12\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Puesto12\\Desktop\\WK VS\\FarmaSupply_C\\FarmaSupply\\obj\\",
+      "projectPath": "C:\\Users\\ivan-\\OneDrive\\Escritorio\\FarmaSupply_C\\FarmaSupply\\FarmaSupply.csproj",
+      "packagesPath": "C:\\Users\\ivan-\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ivan-\\OneDrive\\Escritorio\\FarmaSupply_C\\FarmaSupply\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Puesto12\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ivan-\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6758,8 +6758,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Puesto12\\Desktop\\WK VS\\FarmaSupply_C\\DAL\\DAL.csproj": {
-              "projectPath": "C:\\Users\\Puesto12\\Desktop\\WK VS\\FarmaSupply_C\\DAL\\DAL.csproj"
+            "C:\\Users\\ivan-\\OneDrive\\Escritorio\\FarmaSupply_C\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\ivan-\\OneDrive\\Escritorio\\FarmaSupply_C\\DAL\\DAL.csproj"
             }
           }
         }
