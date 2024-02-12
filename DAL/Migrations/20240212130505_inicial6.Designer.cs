@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DAL.Migrations
 {
     [DbContext(typeof(FarmasupplyContext))]
-    [Migration("20240208072730_inicial6")]
+    [Migration("20240212130505_inicial6")]
     partial class inicial6
     {
         /// <inheritdoc />
@@ -166,7 +166,6 @@ namespace DAL.Migrations
                         .HasColumnName("expiracion_token");
 
                     b.Property<byte[]>("Foto")
-                        .IsRequired()
                         .HasColumnType("bytea")
                         .HasColumnName("foto_usuario");
 
@@ -177,7 +176,6 @@ namespace DAL.Migrations
                         .HasColumnName("nombre_usuario");
 
                     b.Property<string>("Rol")
-                        .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("character varying(20)")
                         .HasColumnName("rol_usuario");

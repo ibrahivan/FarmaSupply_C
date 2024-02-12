@@ -163,7 +163,6 @@ namespace DAL.Migrations
                         .HasColumnName("expiracion_token");
 
                     b.Property<byte[]>("Foto")
-                        .IsRequired()
                         .HasColumnType("bytea")
                         .HasColumnName("foto_usuario");
 
@@ -174,7 +173,6 @@ namespace DAL.Migrations
                         .HasColumnName("nombre_usuario");
 
                     b.Property<string>("Rol")
-                        .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("character varying(20)")
                         .HasColumnName("rol_usuario");

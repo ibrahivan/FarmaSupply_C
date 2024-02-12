@@ -32,7 +32,7 @@ namespace FarmaSupply.Servicios
                 smtpCliente.EnableSsl = true;
                 smtpCliente.UseDefaultCredentials = false;
                 smtpCliente.Port = 587;
-                smtpCliente.Credentials = new System.Net.NetworkCredential(EmailOrigen, "");
+                smtpCliente.Credentials = new System.Net.NetworkCredential(EmailOrigen, "ktxn jtmt txlr pzkv");
 
                 smtpCliente.Send(mensajeDelCorreo);
 
@@ -79,7 +79,7 @@ namespace FarmaSupply.Servicios
                 smtpCliente.EnableSsl = true;
                 smtpCliente.UseDefaultCredentials = false;
                 smtpCliente.Port = 587;
-                smtpCliente.Credentials = new System.Net.NetworkCredential(EmailOrigen, "");
+                smtpCliente.Credentials = new System.Net.NetworkCredential(EmailOrigen, "ktxn jtmt txlr pzkv");
 
                 smtpCliente.Send(mensajeDelCorreo);
 

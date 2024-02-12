@@ -23,24 +23,24 @@ namespace DAL.Entidades
         [Required]
         [Column("nombre_usuario")]
         [StringLength(70)]
-        public string NombreUsuario { get; set; }
+        public string NombreUsuario { get; set; } =null;
 
         [Column("apellidos_usuario")]
         [StringLength(100)]
-        public string ApellidosUsuario { get; set; }
+        public string ApellidosUsuario { get; set; } =null;
 
         [Required]
         [Column("dni_usuario")]
         [StringLength(9)]
-        public string DniUsuario { get; set; }
+        public string DniUsuario { get; set; } = null;
 
         [Column("tlf_usuario")]
         [StringLength(9)]
-        public string TlfUsuario { get; set; }
+        public string TlfUsuario { get; set; } = null;
 
         [Required]
         [Column("email_usuario")]
-        [StringLength(100)]
+        [StringLength(100)] 
         public string EmailUsuario { get; set; }
 
         [Required]
@@ -57,13 +57,13 @@ namespace DAL.Entidades
 
         [Column("rol_usuario")]
         [StringLength(20)]
-        public string Rol { get; set; }
+        public string? Rol { get; set; }
 
         [Column("cuenta_confirmada")]
         public bool CuentaConfirmada { get; set; } = false;
 
         [Column("foto_usuario")]
-        public byte[] Foto { get; set; }
+        public byte[]? Foto { get; set; }
 
         public virtual ICollection<Pedido> List_Usu_Ped { get; set; } = new List<Pedido>();
 

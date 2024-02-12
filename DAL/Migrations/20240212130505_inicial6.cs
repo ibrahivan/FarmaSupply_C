@@ -48,9 +48,9 @@ namespace DAL.Migrations
                     clave_usuario = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
                     token_recuperacion = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
                     expiracion_token = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    rol_usuario = table.Column<string>(type: "character varying(20)", maxLength: 20, nullable: false),
+                    rol_usuario = table.Column<string>(type: "character varying(20)", maxLength: 20, nullable: true),
                     cuenta_confirmada = table.Column<bool>(type: "boolean", nullable: false),
-                    foto_usuario = table.Column<byte[]>(type: "bytea", nullable: false)
+                    foto_usuario = table.Column<byte[]>(type: "bytea", nullable: true)
                 },
                 constraints: table =>
                 {
