@@ -1,21 +1,27 @@
-﻿
-@{
-    ViewData["Title"] = "home";
+﻿@{
+    ViewData["Title"] = "Home";
     var noAdmin = ViewData["noAdmin"] as string;
     var noSePuedeEliminar = ViewData["noSePuedeEliminar"] as string;
     var error = ViewData["error"] as string;
 }
 
-    <section id="hero">
-        <div class="hero container py-5 my-5">
-            <div class="row flex-lg-row-reverse align-items-center g-5 mt-2 py-5">
-                <div class="col-10 col-sm-8 col-lg-6 py-md-5 my-md-5">
-                    <img src="~/css/assets/scooter.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
-                        width="700" height="500" loading="lazy">
-                </div>
+
+
+
+
+
+<section id="hero">
+    <div class="hero container py-5 my-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 mt-2 py-5">
+            <div class="col-10 col-sm-8 col-lg-6 py-md-5 my-md-5">
+                <img src="~/css/assets/scooter.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                     width="700" height="500" loading="lazy">
             </div>
+            
         </div>
-    </section>
+    </div>
+
+</section>
 @if (!string.IsNullOrEmpty(noAdmin))
 {
     <script>

@@ -92,8 +92,17 @@
                                 </a>
                             </li>
                         }
+                         
                         @if (User.Identity.IsAuthenticated && currentController == "Login")
                         {
+
+
+                            <li class="nav-list mx-3">
+                                <a class="nav-link px-2" href="/privada/administracion-usuarios">
+                                    Editar usuario
+                                </a>
+
+                            </li>
                             <li class="nav-list mx-3">
                                 <form asp-action="CerrarSesion" method="post" id="logoutForm">
                                     <button type="button" class="btn buttonPrincipal" onclick="confirmarLogout()"> Cerrar sesión
