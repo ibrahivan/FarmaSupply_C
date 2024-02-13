@@ -20,7 +20,7 @@ namespace FarmaSupply.DTO
         public string Password2 { get; set; }
         public DateTime? ExpiracionToken { get; set; }
         public bool CuentaConfirmada { get; set; }
-        public string Foto { get; set; }
+        public byte[] Foto { get; set; }
         public string Rol { get; set; }
         public List<Pedido> List_Usu_Ped { get; set; } = new List<Pedido>();
         public List<Tienda> List_Usu_Tie { get; set; } = new List<Tienda>();
@@ -29,7 +29,7 @@ namespace FarmaSupply.DTO
         public UsuarioDTO() { }
 
         public UsuarioDTO(string nombreUsuario, string apellidosUsuario, string dniUsuario, string tlfUsuario,
-            string emailUsuario, string claveUsuario, string foto, string rol)
+            string emailUsuario, string claveUsuario, byte[] foto, string rol)
         {
             NombreUsuario = nombreUsuario;
             ApellidosUsuario = apellidosUsuario;
@@ -43,7 +43,7 @@ namespace FarmaSupply.DTO
 
         public UsuarioDTO(string nombreUsuario, string apellidosUsuario, string dniUsuario, string tlfUsuario,
             string emailUsuario, string claveUsuario, string token, string password, string password2,
-            DateTime? expiracionToken, bool cuentaConfirmada, string foto, string rol, List<Pedido> list_Usu_Ped,
+            DateTime? expiracionToken, bool cuentaConfirmada, byte[] foto, string rol, List<Pedido> list_Usu_Ped,
             List<Tienda> list_Usu_Tie)
         {
             NombreUsuario = nombreUsuario;

@@ -102,14 +102,5 @@ namespace FarmaSupply.Servicios
         /// <param name="data">Los datos de la imagen a convertir.</param>
         /// <returns>Un string que representa la imagen convertida.</returns>
 
-        public String convertToBase64(byte[] data);
-
-        /// <summary>
-        /// Convierte un string de base64 en un array de bytes, representando la imagen.
-        /// </summary>
-        /// <param name="base64String">El string de base64 que representa la imagen.</param>
-        /// <returns>Un array de bytes que representa la imagen convertida.</returns>
-
-        public byte[] convertToByteArray(String base64String);
     }
 }

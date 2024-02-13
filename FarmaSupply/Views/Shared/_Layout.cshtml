@@ -23,8 +23,15 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="~/script/script1.js"></script>
-    <!-- script ================================================== -->
     <script src="~/script/modernizr.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/script/jquery-1.11.0.min.js"></script>
+    <script src="~/script/plugins.js"></script>
+    <script src="~/script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+
 </head>
 <body>
     <!-- Navigation Section Starts -->
@@ -71,24 +78,23 @@
                             </li>
 
                         }
-                        @if ((currentController == "AdministracionUsuarios" && currentAction == "ListadoUsuarios")
+                        @if ((currentController == "Administracion" && currentAction == "ListadoUsuarios")
                         ||
-                        (currentController == "AdministracionUsuarios" && currentAction == "ProcesarFormularioEdicion"))
+                        (currentController == "Administracion" && currentAction == "ProcesarFormularioEdicion"))
                         {
                             <li class="nav-list mx-3">
-                                <a class="nav-link px-2" href="/">
+                                <a class="nav-link px-2" href="/privada/home">
                                     Volver
                                 </a>
                             </li>
                         }
-                        @if (currentController == "AdministracionUsuarios"
+                        @if (currentController == "Administracion"
                         &&
                         (currentAction == "MostrarFormularioEdicion" || currentAction == "RegistroUsuarioDesdeAdminGet"))
                         {
                             <li class="nav-list mx-3">
-                                <a class="nav-link px-2" href="/privada/dashboard"
-                                    href="/privada/administracion-usuarios">
-                                    <i class="bi bi-person-fill-gear fs-5">Volver a Administracion usuarios</i>
+                                <a class="nav-link px-2" href="/privada/administracion-usuarios">
+                                    Volver a Administracion usuarios
                                 </a>
                             </li>
                         }
@@ -97,7 +103,7 @@
                         {
 
 
-                            <li class="nav-list mx-3">
+                            <li class="nav-list mx-3" asp:authorize="User.IsInRole('ROLE_ADMIN')">
                                 <a class="nav-link px-2" href="/privada/administracion-usuarios">
                                     Editar usuario
                                 </a>
@@ -130,13 +136,6 @@
             &copy; 2024 - FarmaSupply - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/script/jquery-1.11.0.min.js"></script>
-    <script src="~/script/plugins.js"></script>
-    <script src="~/script/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
     
     @await RenderSectionAsync("Scripts", required: false)
 </body>

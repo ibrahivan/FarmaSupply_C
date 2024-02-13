@@ -41,9 +41,9 @@ namespace DAL.Migrations
                     id_usuario = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
                     nombre_usuario = table.Column<string>(type: "character varying(70)", maxLength: 70, nullable: false),
-                    apellidos_usuario = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    apellidos_usuario = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
                     dni_usuario = table.Column<string>(type: "character varying(9)", maxLength: 9, nullable: false),
-                    tlf_usuario = table.Column<string>(type: "character varying(9)", maxLength: 9, nullable: false),
+                    tlf_usuario = table.Column<string>(type: "character varying(9)", maxLength: 9, nullable: true),
                     email_usuario = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
                     clave_usuario = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
                     token_recuperacion = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),

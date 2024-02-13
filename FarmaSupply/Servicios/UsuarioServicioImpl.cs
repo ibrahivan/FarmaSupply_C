@@ -367,9 +367,11 @@ namespace FarmaSupply.Servicios
 
                 if (usuarioActual != null)
                 {
-                    usuarioActual.NombreUsuario = usuarioModificado.NombreUsuario + " " + usuarioModificado.ApellidosUsuario;
+                    usuarioActual.NombreUsuario=usuarioModificado.NombreUsuario;
+                    usuarioActual.ApellidosUsuario =usuarioModificado.ApellidosUsuario;
                     usuarioActual.TlfUsuario = usuarioModificado.TlfUsuario;
                     usuarioActual.Rol = usuarioModificado.Rol;
+                    usuarioActual.Foto = usuarioModificado.Foto;
 
                     _contexto.Usuarios.Update(usuarioActual);
                     _contexto.SaveChanges();
@@ -394,25 +396,6 @@ namespace FarmaSupply.Servicios
 
      
 
-
-        public string convertToBase64(byte[] data)
-        {
-            if (data != null && data.Length > 0)
-            {
-                return Convert.ToBase64String(data);
-            }
-            return null;
-        }
-
-
-        public byte[] convertToByteArray(string base64String)
-        {
-            if (!string.IsNullOrEmpty(base64String))
-            {
-                return Convert.FromBase64String(base64String);
-            }
-            return null;
-        }
 
     }
 }

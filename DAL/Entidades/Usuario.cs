@@ -27,16 +27,16 @@ namespace DAL.Entidades
 
         [Column("apellidos_usuario")]
         [StringLength(100)]
-        public string ApellidosUsuario { get; set; } =null;
+        public string? ApellidosUsuario { get; set; } =null;
 
         [Required]
         [Column("dni_usuario")]
         [StringLength(9)]
-        public string DniUsuario { get; set; } = null;
+        public string? DniUsuario { get; set; } = null;
 
         [Column("tlf_usuario")]
         [StringLength(9)]
-        public string TlfUsuario { get; set; } = null;
+        public string? TlfUsuario { get; set; } = null;
 
         [Required]
         [Column("email_usuario")]

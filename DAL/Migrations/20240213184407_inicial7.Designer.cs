@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DAL.Migrations
 {
     [DbContext(typeof(FarmasupplyContext))]
-    [Migration("20240213101903_inicial7")]
+    [Migration("20240213184407_inicial7")]
     partial class inicial7
     {
         /// <inheritdoc />
@@ -134,7 +134,6 @@ namespace DAL.Migrations
                     NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("IdUsuario"));
 
                     b.Property<string>("ApellidosUsuario")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)")
                         .HasColumnName("apellidos_usuario");
@@ -181,7 +180,6 @@ namespace DAL.Migrations
                         .HasColumnName("rol_usuario");
 
                     b.Property<string>("TlfUsuario")
-                        .IsRequired()
                         .HasMaxLength(9)
                         .HasColumnType("character varying(9)")
                         .HasColumnName("tlf_usuario");
