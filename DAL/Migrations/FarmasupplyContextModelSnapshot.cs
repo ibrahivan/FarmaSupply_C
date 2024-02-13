@@ -184,7 +184,6 @@ namespace DAL.Migrations
                         .HasColumnName("tlf_usuario");
 
                     b.Property<string>("Token")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)")
                         .HasColumnName("token_recuperacion");

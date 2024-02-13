@@ -46,7 +46,7 @@ namespace DAL.Migrations
                     tlf_usuario = table.Column<string>(type: "character varying(9)", maxLength: 9, nullable: false),
                     email_usuario = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
                     clave_usuario = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
-                    token_recuperacion = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    token_recuperacion = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
                     expiracion_token = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     rol_usuario = table.Column<string>(type: "character varying(20)", maxLength: 20, nullable: true),
                     cuenta_confirmada = table.Column<bool>(type: "boolean", nullable: false),

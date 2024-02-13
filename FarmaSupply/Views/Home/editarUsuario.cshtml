@@ -2,6 +2,15 @@
 
 @{
     ViewData["Title"] = "Editar usuario";
+    var noSePuedeEliminar = ViewData["noSePuedeEliminar"] as string;
+    var elUsuarioTieneQuedadas = ViewData["elUsuarioTieneQuedadas"] as string;
+    var eliminacionCorrecta = ViewData["eliminacionCorrecta"] as string;
+    var EdicionCorrecta = ViewData["EdicionCorrecta"] as string;
+    var mensajeRegistroExitoso = ViewData["MensajeRegistroExitoso"] as string;
+    var cuentaNoVerificada = ViewData["EmailNoConfirmado"] as string;
+    var noTePuedesEliminar = ViewData["noTePuedesEliminar"] as string;
+    var usuarioNoEncontrado = ViewData["usuarioNoEncontrado"] as string;
+    var error = ViewData["error"] as string;
 }
 
 
@@ -64,4 +73,5 @@
                 </div>
             </div>
         </div>
+  
     </section>

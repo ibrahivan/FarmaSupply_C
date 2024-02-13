@@ -23,7 +23,7 @@ namespace DAL.Entidades
         [Required]
         [Column("nombre_usuario")]
         [StringLength(70)]
-        public string NombreUsuario { get; set; } =null;
+        public string? NombreUsuario { get; set; } =null;
 
         [Column("apellidos_usuario")]
         [StringLength(100)]
@@ -41,16 +41,16 @@ namespace DAL.Entidades
         [Required]
         [Column("email_usuario")]
         [StringLength(100)] 
-        public string EmailUsuario { get; set; }
+        public string? EmailUsuario { get; set; }
 
         [Required]
         [Column("clave_usuario")]
         [StringLength(100)]
-        public string ClaveUsuario { get; set; }
+        public string? ClaveUsuario { get; set; }
 
         [Column("token_recuperacion")]
         [StringLength(100)]
-        public string Token { get; set; }
+        public string? Token { get; set; }
 
         [Column("expiracion_token")]
         public DateTime? ExpiracionToken { get; set; }

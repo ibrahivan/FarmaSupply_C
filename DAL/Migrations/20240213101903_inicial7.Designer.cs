@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DAL.Migrations
 {
     [DbContext(typeof(FarmasupplyContext))]
-    [Migration("20240212185521_inicial7")]
+    [Migration("20240213101903_inicial7")]
     partial class inicial7
     {
         /// <inheritdoc />
@@ -187,7 +187,6 @@ namespace DAL.Migrations
                         .HasColumnName("tlf_usuario");
 
                     b.Property<string>("Token")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)")
                         .HasColumnName("token_recuperacion");

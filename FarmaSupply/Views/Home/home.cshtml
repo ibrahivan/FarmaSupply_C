@@ -13,12 +13,6 @@
                     <img src="~/css/assets/scooter.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
                         width="700" height="500" loading="lazy">
                 </div>
-                <div class="col-lg-6 py-md-5 my-md-5">
-                <h3 class="text-dark text-center mt-5">Bienvenido <span>@User.Identity.Name</span></h3>
-                    <script asp-if="!string.IsNullOrEmpty(ViewBag.Usuario.NoAdmin)">
-                        mostrarNotificacion("¡Prohibido!", "No tiene permisos para acceder a este recurso", 'error');
-                    </script>
-                </div>
             </div>
         </div>
     </section>

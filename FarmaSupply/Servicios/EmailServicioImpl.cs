@@ -11,7 +11,7 @@ namespace FarmaSupply.Servicios
             {
                 EscribirLog.escribirEnFicheroLog("[INFO] Entrando en el método enviarEmailConfirmacion() de la clase ServicioEmailImpl");
 
-                string urlDominio = "https://localhost:7142";
+                string urlDominio = "https://localhost:7233";
 
                 string EmailOrigen = "ivan.vazquez.cod@gmail.com";
                 //Se crea la URL de recuperación con el token que se enviará al mail del user.
@@ -58,7 +58,7 @@ namespace FarmaSupply.Servicios
             {
                 EscribirLog.escribirEnFicheroLog("[INFO] Entrando en el método enviarEmailRecuperacion() de la clase ServicioEmailImpl");
 
-                string urlDominio = "https://localhost:7142";
+                string urlDominio = "https://localhost:7233";
 
                 string EmailOrigen = "ivan.vazquez.cod@gmail.com";
                 //Se crea la URL de recuperación con el token que se enviará al mail del user.
