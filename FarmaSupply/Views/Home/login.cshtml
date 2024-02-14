@@ -40,10 +40,12 @@
                                     type="submit" id="btnAcceder">
                                 Acceder
                             </button>
+                        
+                  
                         </div>
                     </form>
                     <div class="d-grid my-3">
-                        <form id="registroForm" class="form-group flex-wrap p-3" method="GET" asp-page="/auth/crear-cuenta">
+                    <form id="registroForm" class="form-group flex-wrap p-3" method="GET" asp-action="RegistrarPost" asp-controller="Registro">
                             <button type="submit"
                                     class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">
                                 Registrarse
@@ -51,7 +53,7 @@
                         </form>
                     </div>
                     <div class="d-grid my-3">
-                        <form id="recuperacionForm" class="form-group flex-wrap p-3" asp-page="/auth/solicitar-recuperacion"
+                    <form id="recuperacionForm" class="form-group flex-wrap p-3" asp-action="MostrarVistaIniciarRecuperacion" asp-controller="RecuperarClave"
                               method="get">
                             <button type="submit"
                                     class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6">

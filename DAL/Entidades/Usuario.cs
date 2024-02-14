@@ -5,6 +5,8 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 /// <summary>
 /// Clase DAO (Data Access Object) que representa la tabla usuarios de la BBDD, 
 /// ejerce como modelo virtual de la tabla en la aplicación.
@@ -52,7 +54,8 @@ namespace DAL.Entidades
         [StringLength(100)]
         public string? Token { get; set; }
 
-        [Column("expiracion_token")]
+        [Column(TypeName = "timestamp without time zone")]
+        
         public DateTime? ExpiracionToken { get; set; }
 
         [Column("rol_usuario")]

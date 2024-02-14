@@ -2,6 +2,7 @@
 using FarmaSupply.Servicios;
 using FarmaSupply.Utils;
 using Microsoft.AspNetCore.Mvc;
+using System.Globalization;
 
 namespace FarmaSupply.Controllers
 {
@@ -23,13 +24,13 @@ namespace FarmaSupply.Controllers
                 EscribirLog.escribirEnFicheroLog("[INFO] Entrando en el método MostrarVistaIniciarRecuperacion() de la clase SolicitarRecuperacionController");
 
                 UsuarioDTO usuarioDTO = new UsuarioDTO();
-                return View("~/Views/Home/solicitarRecuperacionClave.cshtml", usuarioDTO);
+                return View("~/Views/Home/iniciarRecuperacion.cshtml", usuarioDTO);
             }
             catch (Exception e)
             {
                 ViewData["error"] = "Error al procesar la solicitud. Por favor, inténtelo de nuevo.";
                 EscribirLog.escribirEnFicheroLog("[ERROR] Se lanzó una excepción en el método MostrarVistaIniciarRecuperacion() de la clase SolicitarRecuperacionController: " + e.Message + e.StackTrace);
-                return View("~/Views/Home/solicitarRecuperacionClave.cshtml");
+                return View("~/Views/Home/iniciarRecuperacion.cshtml");
             }
         }
 
@@ -54,13 +55,13 @@ namespace FarmaSupply.Controllers
                     ViewData["MensajeErrorMail"] = "No se inició el proceso de recuperación, cuenta de correo electrónico no encontrada.";
                 }
                 EscribirLog.escribirEnFicheroLog("[INFO] Saliendo del método ProcesarInicioRecuperacion() de la clase RecuperarClaveController. " + ViewData["MensajeErrorMail"]);
-                return View("~/Views/Home/solicitarRecuperacionClave.cshtml");
+                return View("~/Views/Home/iniciarRecuperacion.cshtml");
             }
             catch (Exception e)
             {
                 ViewData["error"] = "Error al procesar la solicitud. Por favor, inténtelo de nuevo.";
                 EscribirLog.escribirEnFicheroLog("[ERROR] Se lanzó una excepción en el método ProcesarInicioRecuperacion() de la clase RecuperarClaveController: " + e.Message + e.StackTrace);
-                return View("~/Views/Home/solicitarRecuperacionClave.cshtml");
+                return View("~/Views/Home/iniciarRecuperacion.cshtml");
             }
         }
         [HttpGet]
@@ -82,7 +83,7 @@ namespace FarmaSupply.Controllers
                 {
                     ViewData["MensajeErrorTokenValidez"] = "El enlace de recuperación no es válido o el usuario no se ha encontrado";
                     EscribirLog.escribirEnFicheroLog("[INFO] Saliendo del método MostrarVistaRecuperar() de la clase RecuperarClaveController. " + ViewData["MensajeErrorTokenValidez"]);
-                    return View("~/Views/Home/solicitarRecuperacionClave.cshtml");
+                    return View("~/Views/Home/iniciarRecuperacion.cshtml");
                 }
                 EscribirLog.escribirEnFicheroLog("[INFO] Saliendo del método MostrarVistaRecuperar() de la clase RecuperarClaveController");
                 return View("~/Views/Home/recuperar.cshtml");
@@ -91,7 +92,7 @@ namespace FarmaSupply.Controllers
             {
                 ViewData["error"] = "Error al procesar la solicitud. Por favor, inténtelo de nuevo.";
                 EscribirLog.escribirEnFicheroLog("[ERROR] Se lanzó una excepción en el método MostrarVistaRecuperar() de la clase RecuperarClaveController: " + e.Message + e.StackTrace);
-                return View("~/Views/Home/solicitarRecuperacionClave.cshtml");
+                return View("~/Views/Home/iniciarRecuperacion.cshtml");
             }
         }
 
@@ -110,14 +111,14 @@ namespace FarmaSupply.Controllers
                 {
                     ViewData["MensajeErrorTokenValidez"] = "El enlace de recuperación no es válido";
                     EscribirLog.escribirEnFicheroLog("[INFO] Saliendo del método ProcesarRecuperacionContrasenya() de la clase RecuperarClaveController. " + ViewData["MensajeErrorTokenValidez"]);
-                    return View("~/Views/Home/solicitarRecuperacionClave.cshtml");
+                    return View("~/Views/Home/iniciarRecuperacion.cshtml");
                 }
 
                 if (usuarioExistente.ExpiracionToken.HasValue && usuarioExistente.ExpiracionToken.Value < DateTime.Now)
                 {
                     ViewData["MensajeErrorTokenExpirado"] = "El enlace de recuperación ha expirado";
                     EscribirLog.escribirEnFicheroLog("[INFO] Saliendo del método ProcesarRecuperacionContrasenya() de la clase RecuperarClaveController. " + ViewData["MensajeErrorTokenExpirado"]);
-                    return View("~/Views/Home/solicitarRecuperacionClave.cshtml");
+                    return View("~/Views/Home/iniciarRecuperacion.cshtml");
                 }
 
                 bool modificadaPassword = _usuarioServicio.modificarContrasenyaConToken(usuarioDTO);
@@ -132,14 +133,14 @@ namespace FarmaSupply.Controllers
                 {
                     ViewData["ContraseñaModificadaError"] = "Error al cambiar de contraseña";
                     EscribirLog.escribirEnFicheroLog("[INFO] Saliendo del método ProcesarRecuperacionContrasenya() de la clase RecuperarClaveController. " + ViewData["ContraseñaModificadaError"]);
-                    return View("~/Views/Home/solicitarRecuperacionClave.cshtml");
+                    return View("~/Views/Home/iniciarRecuperacion.cshtml");
                 }
             }
             catch (Exception e)
             {
                 ViewData["error"] = "Error al procesar la solicitud. Por favor, inténtelo de nuevo.";
                 EscribirLog.escribirEnFicheroLog("[ERROR] Se lanzó una excepción en el método ProcesarRecuperacionContrasenya() de la clase RecuperarClaveController: " + e.Message + e.StackTrace);
-                return View("~/Views/Home/solicitarRecuperacionClave.cshtml");
+                return View("~/Views/Home/iniciarRecuperacion.cshtml");
             }
         }
 

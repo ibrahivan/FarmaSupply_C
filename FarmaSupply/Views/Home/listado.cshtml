@@ -16,13 +16,12 @@
     <div class="container py-4 mt-5">
         <div class="card bg-light">
             <div class="card-header">
-                <h3>Listado usuarios</h3>
+                <h1>Listado usuarios</h1>
             </div>
             <div class="card-body">
-           
-                
+          
                 <h4 class="card-title">
-                <a asp-controller="AdministracionUsuarios" asp-action="RegistroUsuarioDesdeAdminGet" role="button">Registrar usuario</a>
+                <a asp-controller="Administracion" asp-action="RegistroUsuarioDesdeAdminGet" role="button" class="btn buttonPrincipal p-2 mb-3"><h5>Registrar usuario</h5></a>
                 </h4>
             @if (ViewBag.Usuarios != null)
             {

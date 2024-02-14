@@ -158,8 +158,7 @@ namespace DAL.Migrations
                         .HasColumnName("email_usuario");
 
                     b.Property<DateTime?>("ExpiracionToken")
-                        .HasColumnType("timestamp with time zone")
-                        .HasColumnName("expiracion_token");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<byte[]>("Foto")
                         .HasColumnType("bytea")

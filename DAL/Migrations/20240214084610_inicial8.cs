@@ -7,7 +7,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DAL.Migrations
 {
     /// <inheritdoc />
-    public partial class inicial7 : Migration
+    public partial class inicial8 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -47,7 +47,7 @@ namespace DAL.Migrations
                     email_usuario = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
                     clave_usuario = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
                     token_recuperacion = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: true),
-                    expiracion_token = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    ExpiracionToken = table.Column<DateTime>(type: "timestamp without time zone", nullable: true),
                     rol_usuario = table.Column<string>(type: "character varying(20)", maxLength: 20, nullable: true),
                     cuenta_confirmada = table.Column<bool>(type: "boolean", nullable: false),
                     foto_usuario = table.Column<byte[]>(type: "bytea", nullable: true)

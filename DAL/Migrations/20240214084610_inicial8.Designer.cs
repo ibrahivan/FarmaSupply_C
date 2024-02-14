@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace DAL.Migrations
 {
     [DbContext(typeof(FarmasupplyContext))]
-    [Migration("20240213184407_inicial7")]
-    partial class inicial7
+    [Migration("20240214084610_inicial8")]
+    partial class inicial8
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -161,8 +161,7 @@ namespace DAL.Migrations
                         .HasColumnName("email_usuario");
 
                     b.Property<DateTime?>("ExpiracionToken")
-                        .HasColumnType("timestamp with time zone")
-                        .HasColumnName("expiracion_token");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<byte[]>("Foto")
                         .HasColumnType("bytea")
