@@ -186,10 +186,11 @@ namespace FarmaSupply.Controllers
                     usuarioDTO.Foto = fotoActual;
                 }
 
-                _usuarioServicio.actualizarUsuario(usuarioDTO);
+                
 
                 ViewData["EdicionCorrecta"] = "El Usuario se ha editado correctamente";
-                ViewBag.Usuarios = _usuarioServicio.obtenerTodosLosUsuarios();
+                _usuarioServicio.actualizarUsuario(usuarioDTO);
+                ListadoUsuarios(usuarioDTO);
 
                 EscribirLog.escribirEnFicheroLog("[INFO] Saliendo del método ProcesarFormularioEdicion() de la clase AdministracionUsuariosController. " + ViewData["EdicionCorrecta"]);
                 return View("~/Views/Home/listado.cshtml");

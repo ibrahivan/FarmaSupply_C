@@ -17,67 +17,67 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FarmaSupply
 build_property.RootNamespace = FarmaSupply
-build_property.ProjectDir = C:\Users\Puesto12\Desktop\WK VS\FarmaSupply_C\FarmaSupply\
+build_property.ProjectDir = C:\Users\ivan-\OneDrive\Escritorio\FarmaSupply_C\FarmaSupply\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Puesto12\Desktop\WK VS\FarmaSupply_C\FarmaSupply
+build_property.MSBuildProjectDirectory = C:\Users\ivan-\OneDrive\Escritorio\FarmaSupply_C\FarmaSupply
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Puesto12/Desktop/WK VS/FarmaSupply_C/FarmaSupply/Views/Home/editarUsuario.cshtml]
+[C:/Users/ivan-/OneDrive/Escritorio/FarmaSupply_C/FarmaSupply/Views/Home/editarUsuario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxlZGl0YXJVc3VhcmlvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Puesto12/Desktop/WK VS/FarmaSupply_C/FarmaSupply/Views/Home/home.cshtml]
+[C:/Users/ivan-/OneDrive/Escritorio/FarmaSupply_C/FarmaSupply/Views/Home/home.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxob21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Puesto12/Desktop/WK VS/FarmaSupply_C/FarmaSupply/Views/Home/Index.cshtml]
+[C:/Users/ivan-/OneDrive/Escritorio/FarmaSupply_C/FarmaSupply/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Puesto12/Desktop/WK VS/FarmaSupply_C/FarmaSupply/Views/Home/iniciarRecuperacion.cshtml]
+[C:/Users/ivan-/OneDrive/Escritorio/FarmaSupply_C/FarmaSupply/Views/Home/iniciarRecuperacion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxpbmljaWFyUmVjdXBlcmFjaW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Puesto12/Desktop/WK VS/FarmaSupply_C/FarmaSupply/Views/Home/listado.cshtml]
+[C:/Users/ivan-/OneDrive/Escritorio/FarmaSupply_C/FarmaSupply/Views/Home/listado.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxsaXN0YWRvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Puesto12/Desktop/WK VS/FarmaSupply_C/FarmaSupply/Views/Home/login.cshtml]
+[C:/Users/ivan-/OneDrive/Escritorio/FarmaSupply_C/FarmaSupply/Views/Home/login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxsb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Puesto12/Desktop/WK VS/FarmaSupply_C/FarmaSupply/Views/Home/Privacy.cshtml]
+[C:/Users/ivan-/OneDrive/Escritorio/FarmaSupply_C/FarmaSupply/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Puesto12/Desktop/WK VS/FarmaSupply_C/FarmaSupply/Views/Home/recuperar.cshtml]
+[C:/Users/ivan-/OneDrive/Escritorio/FarmaSupply_C/FarmaSupply/Views/Home/recuperar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxyZWN1cGVyYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Puesto12/Desktop/WK VS/FarmaSupply_C/FarmaSupply/Views/Home/registro.cshtml]
+[C:/Users/ivan-/OneDrive/Escritorio/FarmaSupply_C/FarmaSupply/Views/Home/registro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxyZWdpc3Ryby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Puesto12/Desktop/WK VS/FarmaSupply_C/FarmaSupply/Views/Shared/Error.cshtml]
+[C:/Users/ivan-/OneDrive/Escritorio/FarmaSupply_C/FarmaSupply/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Puesto12/Desktop/WK VS/FarmaSupply_C/FarmaSupply/Views/Shared/_Layout.cshtml]
+[C:/Users/ivan-/OneDrive/Escritorio/FarmaSupply_C/FarmaSupply/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Puesto12/Desktop/WK VS/FarmaSupply_C/FarmaSupply/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/ivan-/OneDrive/Escritorio/FarmaSupply_C/FarmaSupply/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Puesto12/Desktop/WK VS/FarmaSupply_C/FarmaSupply/Views/_ViewImports.cshtml]
+[C:/Users/ivan-/OneDrive/Escritorio/FarmaSupply_C/FarmaSupply/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Puesto12/Desktop/WK VS/FarmaSupply_C/FarmaSupply/Views/_ViewStart.cshtml]
+[C:/Users/ivan-/OneDrive/Escritorio/FarmaSupply_C/FarmaSupply/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
