@@ -1,4 +1,5 @@
-﻿using FarmaSupply.DTO;
+﻿using DAL.Entidades;
+using FarmaSupply.DTO;
 using FarmaSupply.Servicios;
 using FarmaSupply.Utils;
 using Microsoft.AspNetCore.Authorization;
@@ -22,18 +23,31 @@ namespace FarmaSupply.Controllers
         /// Obtiene y muestra el listado de todos los usuarios en la vista de administración de usuarios.
         /// </summary>
         
-        [Authorize(Roles = "ROLE_ADMIN")]
+      
         [HttpGet]
         [Route("/privada/administracion-usuarios")]
-        public IActionResult ListadoUsuarios()
+        public IActionResult ListadoUsuarios(UsuarioDTO usuario)
         {
             try
             {
-                EscribirLog.escribirEnFicheroLog("[INFO] Entrando en el método ListadoUsuarios() de la clase AdministracionUsuariosController");
                 List<UsuarioDTO> usuarios = new List<UsuarioDTO>();
-                ViewBag.Usuarios = _usuarioServicio.obtenerTodosLosUsuarios();
-                
+                UsuarioDTO usuarioDTO = new UsuarioDTO();
+                if (User.IsInRole("ROLE_ADMIN"))
+                {
+                    EscribirLog.escribirEnFicheroLog("[INFO] Entrando en el método ListadoUsuarios() de la clase AdministracionUsuariosController");
+                    
+                    ViewBag.Usuarios = _usuarioServicio.obtenerTodosLosUsuarios();
 
+                }
+                else if (User.IsInRole("ROLE_USER"))
+                {
+                    // Obtener solo el usuario actual si el usuario tiene el rol "ROLE_USER"
+                    usuarioDTO= _usuarioServicio.obtenerUsuarioPorEmail(User.Identity.Name);
+                    usuarios.Add(usuarioDTO);
+                    ViewBag.Usuarios = usuarios;
+                    
+
+                }
                 EscribirLog.escribirEnFicheroLog("[INFO] Saliendo del método ListadoUsuarios() de la clase AdministracionUsuariosController");
                 return View("~/Views/Home/listado.cshtml");
             }
@@ -49,7 +63,7 @@ namespace FarmaSupply.Controllers
         /// Elimina un usuario con el ID proporcionado y redirige a la vista de administración de usuarios con el resultado de la eliminación.
         /// </summary>
         /// <param name="id">ID del usuario a eliminar.</param>
-        [Authorize(Roles = "ROLE_ADMIN")]
+       
         [HttpGet]
         [Route("/privada/eliminar-usuario/{id}")]
         public IActionResult EliminarUsuario(long id)
@@ -101,13 +115,13 @@ namespace FarmaSupply.Controllers
         /// Edita el usuario con el ID proporcionado y redirige a la vista correspondiente con el resultado de la edición.
         /// </summary>
         /// <param name="id">ID del usuario a editar.</param>
-        [Authorize(Roles = "ROLE_ADMIN")]
+        
         [HttpGet]
         [Route("/privada/editar-usuario/{id}")]
         public IActionResult MostrarFormularioEdicion(long id)
         {
             try
-            {
+             {
                 EscribirLog.escribirEnFicheroLog("[INFO] Entrando en el método MostrarFormularioEdicion() de la clase AdministracionUsuariosController");
 
                 UsuarioDTO usuarioDTO = _usuarioServicio.buscarPorId(id);
@@ -131,8 +145,8 @@ namespace FarmaSupply.Controllers
         /// <summary>
         /// Procesa la edición del usuario y redirige a la vista correspondiente con el resultado de la edición.
         /// </summary>
-        /// <param name="usuarioDTO">El objeto DTO con los nuevos datos del usuario.</param>
-        [Authorize(Roles = "ROLE_ADMIN")]
+        
+ 
         [HttpPost]
         [Route("/privada/procesar-editar")]
         public IActionResult ProcesarFormularioEdicion(long id, string nombre, string apellidos, string telefono, string rol, IFormFile foto)

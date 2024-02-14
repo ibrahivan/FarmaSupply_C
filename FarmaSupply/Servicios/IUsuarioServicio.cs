@@ -33,14 +33,14 @@ namespace FarmaSupply.Servicios
         /// <returns>El usuario buscado</returns>
         public UsuarioDTO obtenerUsuarioPorEmail(string email);
 
+
         /// <summary>
-        /// Busca a un usuario por su DNI
+        /// Obtiene todos los usuarios
         /// </summary>
-        /// <param name="dni">DNI del usuario que se quiere encontrar</param>
-        /// <returns>True si el usuario existe, false en caso contrario</returns>
+        /// <returns>DEvuelve lista de todos los usuarios</returns>
 
         public List<UsuarioDTO> obtenerTodosLosUsuarios();
-
+     
         /// <summary>
         /// Busca un usuario por su token de recuperación.
         /// </summary>

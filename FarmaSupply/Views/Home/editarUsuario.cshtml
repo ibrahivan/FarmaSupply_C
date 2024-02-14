@@ -53,25 +53,38 @@
                         <label for="telefono" class="form-label textoPrincipal">Teléfono</label>
                         <input type="tel" id="telefono" name="telefono" class="form-control" value="@Model.TlfUsuario" required />
                     </div>
-                    @if (Model.Rol == "ROLE_USER")
+                    @if (User.IsInRole("ROLE_ADMIN"))
                     {
-                        <div class="mb-3">
-                            <label for="rol" class="form-label textoPrincipal">Rol del usuario </label>
-                            <select id="rol" name="rol" class="form-select" required>
-                                <option value="ROLE_USER" selected>Usuario</option>
-                                <option value="ROLE_ADMIN" selected>Administrador</option>
-                            </select>
-                        </div>
+
+
+                        @if (Model.Rol == "ROLE_USER")
+                        {
+                            <div class="mb-3">
+                                <label for="rol" class="form-label textoPrincipal">Rol del usuario </label>
+                                <select id="rol" name="rol" class="form-select" required>
+                                    <option value="ROLE_USER" selected>Usuario</option>
+                                    <option value="ROLE_ADMIN">Administrador</option>
+                                </select>
+                            </div>
+                        }
+                        @if (Model.Rol == "ROLE_ADMIN")
+                        {
+                            <div class="mb-3">
+                                <label for="rol" class="form-label textoPrincipal">Rol del usuario </label>
+                                <select id="rol" name="rol" class="form-select" required>
+                                    <option value="ROLE_USER" >Usuario</option>
+                                    <option value="ROLE_ADMIN" selected>Administrador</option>
+                                </select>
+                            </div>
+                        }
                     }
-                    @if (Model.Rol == "ROLE_ADMIN")
+                    else if (User.IsInRole("ROLE_USER"))
                     {
-                        <div class="mb-3">
-                            <label for="rol" class="form-label textoPrincipal">Rol del usuario </label>
-                            <select id="rol" name="rol" class="form-select" required>
-                                <option value="ROLE_USER" >Usuario</option>
-                                <option value="ROLE_ADMIN" selected>Administrador</option>
-                            </select>
-                        </div>
+                            <div class="mb-3">
+                                <label for="rol" class="form-label textoPrincipal">Rol del usuario </label>
+                            <input type="text" name="rol" id="rol" class="form-control" value="Usuario" readonly>
+                            </div>
+                        
                     }
                     <div class="mb-3">
                         <label for="foto" class="form-label textoPrincipal">Foto de Perfil</label>

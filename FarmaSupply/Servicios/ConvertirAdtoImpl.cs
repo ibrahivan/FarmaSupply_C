@@ -78,6 +78,8 @@ namespace FarmaSupply.Servicios
                 dto.ExpiracionToken = u.ExpiracionToken;
                 dto.Id = u.IdUsuario;
                 dto.Rol = u.Rol;
+                dto.Foto = u.Foto;
+                
                 
 
                 EscribirLog.escribirEnFicheroLog("[INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl");

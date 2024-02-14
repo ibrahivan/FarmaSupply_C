@@ -12,7 +12,7 @@
         {
             try
             {
-                using (FileStream fs = new FileStream(@AppDomain.CurrentDomain.BaseDirectory + "bikerconnect.log", FileMode.OpenOrCreate, FileAccess.Write))
+                using (FileStream fs = new FileStream(@AppDomain.CurrentDomain.BaseDirectory + "farmasupply.log", FileMode.OpenOrCreate, FileAccess.Write))
                 {
                     using (StreamWriter m_streamWriter = new StreamWriter(fs))
                     {

@@ -75,6 +75,7 @@ namespace FarmaSupply.Servicios
                 usuarioDao.TlfUsuario = usuarioDTO.TlfUsuario;
                 usuarioDao.DniUsuario = usuarioDTO.DniUsuario;
                 usuarioDao.Rol = usuarioDTO.Rol;
+                usuarioDao.Foto = usuarioDTO.Foto;
                 
 
                 EscribirLog.escribirEnFicheroLog("[INFO] Saliendo del método usuarioToDao() de la clase ConvertirAdaoImpl");

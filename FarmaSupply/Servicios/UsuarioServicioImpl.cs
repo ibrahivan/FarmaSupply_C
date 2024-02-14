@@ -2,6 +2,7 @@
 using FarmaSupply.DTO;
 using FarmaSupply.Utils;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Security.Cryptography;
 
@@ -312,30 +313,46 @@ namespace FarmaSupply.Servicios
 
         public List<UsuarioDTO> obtenerTodosLosUsuarios()
         {
-            EscribirLog.escribirEnFicheroLog("[INFO] Entrando en el método obtenerTodosLosUsuarios() de la clase UsuarioServicioImpl");
+            try
+            {
+                EscribirLog.escribirEnFicheroLog("[INFO] Entrando en el método obtenerTodosLosUsuarios() de la clase UsuarioServicioImpl");
 
-            return _convertirAdto.listaUsuarioToDto(_contexto.Usuarios.ToList());
+                return _convertirAdto.listaUsuarioToDto(_contexto.Usuarios.ToList());
+            }
+            catch (ArgumentNullException e)
+            {
+                Console.WriteLine("[Error UsuarioServicioImpl - obtenerTodosLosUsuarios()] Error al obtener lista de todos los usuarios: " + e.Message);
+                return null;
+            }
         }
+        //public List<UsuarioDTO> obtenerUnUsuario()
+        //{
 
+          
+            
+            
+        //}
         public UsuarioDTO buscarPorId(long id)
         {
             try
             {
                 EscribirLog.escribirEnFicheroLog("[INFO] Entrando en el método buscarPorId() de la clase UsuarioServicioImpl");
-
+                UsuarioDTO usuarioDTO = new UsuarioDTO();
                 Usuario? usuario = _contexto.Usuarios.FirstOrDefault(u => u.IdUsuario == id);
                 if (usuario != null)
                 {
                     EscribirLog.escribirEnFicheroLog("[INFO] Saliendo del método buscarPorId() de la clase UsuarioServicioImpl");
 
-                    return _convertirAdto.usuarioToDto(usuario);
+                    usuarioDTO= _convertirAdto.usuarioToDto(usuario);
                 }
+                return usuarioDTO;
             }
             catch (ArgumentException iae)
             {
                 EscribirLog.escribirEnFicheroLog("[Error UsuarioServicioImpl - buscarPorId()] Al buscar el usuario por su id " + iae.Message);
+                return null;
             }
-            return null;
+            
         }
 
         public void eliminar(long id)

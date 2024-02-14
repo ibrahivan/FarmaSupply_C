@@ -2,7 +2,7 @@
 @{
     ViewData["Title"] = "listado";
     var noSePuedeEliminar = ViewData["noSePuedeEliminar"] as string;
-   
+
     var eliminacionCorrecta = ViewData["eliminacionCorrecta"] as string;
     var EdicionCorrecta = ViewData["EdicionCorrecta"] as string;
     var mensajeRegistroExitoso = ViewData["MensajeRegistroExitoso"] as string;
@@ -10,21 +10,35 @@
     var noTePuedesEliminar = ViewData["noTePuedesEliminar"] as string;
     var usuarioNoEncontrado = ViewData["usuarioNoEncontrado"] as string;
     var error = ViewData["error"] as string;
+    
 }
 
 
     <div class="container py-4 mt-5">
         <div class="card bg-light">
+        @if (User.IsInRole("ROLE_ADMIN")){
             <div class="card-header">
-                <h1>Listado usuarios</h1>
+            
+                <h4>Listado usuarios</h4>
             </div>
+        }
+        @if (User.IsInRole("ROLE_USER"))
+        {
+            <div class="card-header">
+
+                <h4>Edicion de tu usuario</h4>
+            </div>
+        }
             <div class="card-body">
           
-                <h4 class="card-title">
-                <a asp-controller="Administracion" asp-action="RegistroUsuarioDesdeAdminGet" role="button" class="btn buttonPrincipal p-2 mb-3"><h5>Registrar usuario</h5></a>
-                </h4>
-            @if (ViewBag.Usuarios != null)
+              
+
+
+            @if (ViewBag.Usuarios!=null && User.IsInRole("ROLE_ADMIN"))
             {
+                <h4 class="card-title">
+                    <a asp-controller="Administracion" asp-action="RegistroUsuarioDesdeAdminGet" role="button" class="btn buttonPrincipal p-2 mb-3"><h5>Registrar usuario</h5></a>
+                </h4>
                 <table class="table table-striped table-bordered">
                     <thead class="thead-inverse">
                         <tr>
@@ -66,6 +80,47 @@
                     </tbody>
                 </table>
             }
+            else if (ViewBag.Usuarios != null && User.IsInRole("ROLE_USER"))
+            {
+                // Mostrar solo el usuario actual para los usuarios con el rol "ROLE_USER"
+              
+                
+                  <table class="table table-striped table-bordered">
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th class="tableCustom">id</th>
+                            <th class="tableCustom">Nombre y apellidos</th>
+                            <th class="tableCustom">Email</th>
+                            <th class="tableCustom">Teléfono</th>
+                            <th class="tableCustom">DNI</th>
+                            
+                            <th class="tableCustom">Rol</th>
+                            <th class="tableCustom" asp:authorize="User.IsInRole('ROLE_USER')"></th>
+                            
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var usuario in ViewBag.Usuarios)
+                        {
+                            <tr>
+                                <td>@usuario.Id</td>
+                                <td>@(usuario.NombreUsuario + (usuario.ApellidosUsuario != null ? " " + usuario.ApellidosUsuario : ""))</td>
+                                <td>@usuario.EmailUsuario</td>
+                                <td>@usuario.TlfUsuario</td>
+                                <td>@usuario.DniUsuario</td>
+                                
+                                <td>@(usuario.Rol == "ROLE_USER" ? "USER" : "ADMIN")</td>
+                                <td asp:authorize="User.IsInRole('ROLE_ADMIN')">
+                                    <a class="btn buttonPrincipal" asp-action="MostrarFormularioEdicion" asp-controller="Administracion" asp-route-id="@usuario.Id">
+                                        <i class="bi bi-pencil-square"> Editar</i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
             else
             {
                 <h5 class="card-title text-center text-danger">No hay usuarios registrados</h5>
@@ -74,12 +129,7 @@
     </div>
 </div>
 
-    @if (!string.IsNullOrEmpty(usuarioNoEncontrado))
-    {
-        <script>
-            mostrarNotificacion("¡No se encontró al usuario!", "No hay ningún usuario registrado con el email introducido", 'info');
-        </script>
-    }
+   
     @if (!string.IsNullOrEmpty(mensajeRegistroExitoso))
     {
         <script>
