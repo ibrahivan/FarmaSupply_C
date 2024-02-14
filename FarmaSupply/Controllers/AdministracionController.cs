@@ -63,7 +63,7 @@ namespace FarmaSupply.Controllers
         /// Elimina un usuario con el ID proporcionado y redirige a la vista de administración de usuarios con el resultado de la eliminación.
         /// </summary>
         /// <param name="id">ID del usuario a eliminar.</param>
-       
+        [Authorize(Roles = "ROLE_ADMIN")]
         [HttpGet]
         [Route("/privada/eliminar-usuario/{id}")]
         public IActionResult EliminarUsuario(long id)
