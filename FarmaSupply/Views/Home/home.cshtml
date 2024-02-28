@@ -1,14 +1,10 @@
-﻿@{
+﻿@model FarmaSupply.DTO.UsuarioDTO
+@{
     ViewData["Title"] = "Home";
     var noAdmin = ViewData["noAdmin"] as string;
     var noSePuedeEliminar = ViewData["noSePuedeEliminar"] as string;
     var error = ViewData["error"] as string;
 }
-
-
-
-
-
 
 <section id="hero">
     <div class="hero container py-5 my-5">
@@ -17,26 +13,40 @@
                 <img src="~/css/assets/scooter.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
                      width="700" height="500" loading="lazy">
             </div>
-            
+            <div class="col-lg-6 py-md-5 my-md-5">
+                <h3 class="text-dark text-center mt-5">
+                    
+                        <span>Bienvenido a FarmaSupply</span>
+                    
+                </h3>
+                <br>
+
+                @if (User.IsInRole("ROLE_USER"))
+                {
+                    <a asp-controller="Tienda" asp-action="MostrarMisTiendas" class="btn btn-outline-dark btn-lg" role="button">Mis tiendas</a>
+                }
+            </div>
         </div>
     </div>
-
 </section>
+
 @if (!string.IsNullOrEmpty(noAdmin))
 {
     <script>
         mostrarNotificacion("¡Recurso prohibido!", "No tiene los permisos suficientes para acceder a este recurso", 'error');
     </script>
 }
+
 @if (!string.IsNullOrEmpty(noSePuedeEliminar))
 {
     <script>
         mostrarNotificacion("¡Error!", "No se puede eliminar a un usuario con permisos de administrador", 'error');
     </script>
 }
+
 @if (!string.IsNullOrEmpty(error))
 {
     <script>
-        mostrarNotificacion("¡Error!", "Ocurrio un error no esperado, intentelo de nuevo", 'error');
+        mostrarNotificacion("¡Error!", "Ocurrió un error no esperado, inténtelo de nuevo", 'error');
     </script>
 }

@@ -34,26 +34,24 @@ namespace DAL.Entidades
         [Column("codigopostal_tienda")]
         [StringLength(70)]
         public string CodigopostalTienda { get; set; }
-
-        //Para la relacion tienda-usuario
-        public long id_usuario { get; set; }
-        [ForeignKey("id_usuario")]
-        public Usuario IdUsuario_Tie { get; set; }
-
+        [Column("id_usuario_propietario")]
+        [StringLength(70)]
+        public long? IdUsuarioPropietario { get; set; }
+       
 
         public virtual ICollection<Pedido> List_Tie_Ped { get; set; } = new List<Pedido>();
 
-
+        public virtual Usuario? IdUsuarioPropietarioNavigation { get; set; }
         public Tienda() { }
 
-        public Tienda(string nombreTienda, string direccionTienda, string codigopostalTienda, Usuario idUsuario_Tie,
-                      ICollection<Pedido> list_Tie_Ped)
+        public Tienda(string nombreTienda, string direccionTienda, string codigopostalTienda, long? idUsuarioPropietario, ICollection<Pedido> list_Tie_Ped, Usuario? idUsuarioPropietarioNavigation)
         {
             NombreTienda = nombreTienda;
             DireccionTienda = direccionTienda;
             CodigopostalTienda = codigopostalTienda;
-            IdUsuario_Tie = idUsuario_Tie;
+            IdUsuarioPropietario = idUsuarioPropietario;
             List_Tie_Ped = list_Tie_Ped;
+            IdUsuarioPropietarioNavigation = idUsuarioPropietarioNavigation;
         }
     }
 }

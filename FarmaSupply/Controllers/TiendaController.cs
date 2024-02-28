@@ -39,8 +39,8 @@ namespace FarmaSupply.Controllers
 
                 if (usuarioSesionActual != null)
                 {
-                    
-                    List<TiendaDTO> misTiendas = usuarioSesionActual.MisTiendas;
+
+                    List<TiendaDTO> misTiendas = _tiendaServicio.obtenerTiendasPorPropietarioId(usuarioSesionActual.Id);
 
                     if (misTiendas != null && misTiendas.Count > 0)
                     {
@@ -74,7 +74,7 @@ namespace FarmaSupply.Controllers
                 string emailDelUsuario = User.Identity.Name;
                 UsuarioDTO usuarioSesionActual = _usuarioServicio.obtenerUsuarioPorEmail(emailDelUsuario);
                 TiendaDTO nuevaTienda = new TiendaDTO();
-                nuevaTienda.idUsuario_Tie = usuarioSesionActual.Id;
+                nuevaTienda.IdPropietario = usuarioSesionActual.Id;
 
                 EscribirLog.escribirEnFicheroLog("[INFO] Saliendo del método RegistrarTiendaGet() de la clase TiendasController");
                 return View("~/Views/Home/registroTienda.cshtml", nuevaTienda);
@@ -101,10 +101,10 @@ namespace FarmaSupply.Controllers
             {
                 EscribirLog.escribirEnFicheroLog("[INFO] Entrando en el método RegistrarTiendaPost() de la clase TiendasController");
 
+
                 string emailDelUsuario = User.Identity.Name;
                 UsuarioDTO usuarioSesionActual = _usuarioServicio.obtenerUsuarioPorEmail(emailDelUsuario);
-                tiendaDTO.idUsuario_Tie=usuarioSesionActual.Id; // Establecer el ID de usuario en el TiendaDTO
-                
+                tiendaDTO.IdPropietario = usuarioSesionActual.Id;
                 TiendaDTO nuevaTienda = _tiendaServicio.registrarTienda(tiendaDTO);
 
                 if (nuevaTienda != null && nuevaTienda.DireccionTienda != null)
@@ -112,9 +112,10 @@ namespace FarmaSupply.Controllers
                     // Si el usuario y el DNI no son null es que el registro se completo
                     // correctamente
                    
-                    usuarioSesionActual.MisTiendas.Add(nuevaTienda);
+                   
                     ViewData["altaTiendaExito"] = "Alta de la tienda en el sistema OK";
-                    ViewBag.MisTiendas = usuarioSesionActual.MisTiendas;
+                    List<TiendaDTO> misTiendas = _tiendaServicio.obtenerTiendasPorPropietarioId(tiendaDTO.IdPropietario);
+                    ViewBag.MisTiendas = misTiendas;
                     EscribirLog.escribirEnFicheroLog("[INFO] Saliendo del método RegistrarTiendaPost() de la clase TiendasController");
                     return View("~/Views/Home/listadoTiendas.cshtml");
 
@@ -125,7 +126,8 @@ namespace FarmaSupply.Controllers
                     if (tiendaDTO.DireccionTienda == null)
                     {
                         ViewData["altaTiendaErrorDireccion"] = "Ya existe una tienda en esa dirección";
-                        ViewBag.MisTiendas = usuarioSesionActual.MisTiendas;
+                        List<TiendaDTO> misTiendas = _tiendaServicio.obtenerTiendasPorPropietarioId(tiendaDTO.IdPropietario);
+                        ViewBag.MisTiendas = misTiendas;
                         EscribirLog.escribirEnFicheroLog("[INFO] Saliendo del método RegistrarTiendaPost() de la clase TiendasController");
                         return View("~/Views/Home/registroTienda.cshtml");
 
@@ -134,7 +136,8 @@ namespace FarmaSupply.Controllers
                     {
 
                         ViewData["altaTiendaErrorNombre"] = "Ya existe una tienda con ese nombre";
-                        ViewBag.MisTiendas = usuarioSesionActual.MisTiendas;
+                        List<TiendaDTO> misTiendas = _tiendaServicio.obtenerTiendasPorPropietarioId(tiendaDTO.IdPropietario);
+                        ViewBag.MisTiendas = misTiendas;
                         EscribirLog.escribirEnFicheroLog("[INFO] Saliendo del método RegistrarTiendaPost() de la clase TiendasController");
                         return View("~/Views/Home/registroTienda.cshtml");
 
@@ -166,20 +169,20 @@ namespace FarmaSupply.Controllers
                 EscribirLog.escribirEnFicheroLog("[INFO] Entrando en el método EliminarTienda() de la clase TiendasController");
 
                 TiendaDTO tienda = _tiendaServicio.buscarPorId(id);
-                string emailDelUsuario = User.Identity.Name;
-                UsuarioDTO usuarioSesionActual = _usuarioServicio.obtenerUsuarioPorEmail(emailDelUsuario);
+
                 if (tienda != null)
                 {
-                    
-                    List<TiendaDTO> misTiendas = usuarioSesionActual.MisTiendas;
                     _tiendaServicio.eliminarTienda(id);
-                   
+                    List<TiendaDTO> misTiendas = _tiendaServicio.obtenerTiendasPorPropietarioId(tienda.IdPropietario);
+
                     if (misTiendas != null && misTiendas.Count > 0)
                     {
                         ViewBag.MisTiendas = misTiendas;
                     }
+
                     ViewData["eliminacionCorrecta"] = "La tienda se ha eliminado correctamente";
                 }
+
                 EscribirLog.escribirEnFicheroLog("[INFO] Saliendo del método EliminarTienda() de la clase TiendasController. " + ViewData["eliminacionCorrecta"]);
                 return View("~/Views/Home/listadoTiendas.cshtml");
             }

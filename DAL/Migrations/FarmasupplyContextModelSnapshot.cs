@@ -113,18 +113,23 @@ namespace DAL.Migrations
                         .HasColumnType("character varying(70)")
                         .HasColumnName("direccion_tienda");
 
+                    b.Property<long?>("IdUsuarioPropietario")
+                        .HasMaxLength(70)
+                        .HasColumnType("bigint")
+                        .HasColumnName("id_usuario_propietario");
+
+                    b.Property<long?>("IdUsuarioPropietarioNavigationIdUsuario")
+                        .HasColumnType("bigint");
+
                     b.Property<string>("NombreTienda")
                         .IsRequired()
                         .HasMaxLength(70)
                         .HasColumnType("character varying(70)")
                         .HasColumnName("nombre_tienda");
 
-                    b.Property<long>("id_usuario")
-                        .HasColumnType("bigint");
-
                     b.HasKey("IdTienda");
 
-                    b.HasIndex("id_usuario");
+                    b.HasIndex("IdUsuarioPropietarioNavigationIdUsuario");
 
                     b.ToTable("tiendas", "fs_logica");
                 });
@@ -226,13 +231,11 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("DAL.Entidades.Tienda", b =>
                 {
-                    b.HasOne("DAL.Entidades.Usuario", "IdUsuario_Tie")
-                        .WithMany("List_Usu_Tie")
-                        .HasForeignKey("id_usuario")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("DAL.Entidades.Usuario", "IdUsuarioPropietarioNavigation")
+                        .WithMany("Tiendas")
+                        .HasForeignKey("IdUsuarioPropietarioNavigationIdUsuario");
 
-                    b.Navigation("IdUsuario_Tie");
+                    b.Navigation("IdUsuarioPropietarioNavigation");
                 });
 
             modelBuilder.Entity("DAL.Entidades.Tienda", b =>
@@ -242,7 +245,7 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("DAL.Entidades.Usuario", b =>
                 {
-                    b.Navigation("List_Usu_Tie");
+                    b.Navigation("Tiendas");
                 });
 #pragma warning restore 612, 618
         }

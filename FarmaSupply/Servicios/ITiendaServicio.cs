@@ -31,7 +31,13 @@ namespace FarmaSupply.Servicios
         /// <param name="id">El ID de la tienda a eliminar</param>
         void eliminarTienda(long id);
 
-      
+        /// <summary>
+        /// Obtiene una lista de motos por el ID del propietario.
+        /// </summary>
+        /// <param name="id">ID del propietario de las motos.</param>
+        /// <returns>Lista de DTOs de motos pertenecientes al propietario.</returns>
+        List<TiendaDTO> obtenerTiendasPorPropietarioId(long id);
+
     }
 
 

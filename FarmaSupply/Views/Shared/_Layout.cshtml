@@ -22,13 +22,14 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="~/script/script1.js"></script>ss
+
     <script src="~/script/modernizr.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/script/jquery-1.11.0.min.js"></script>
     <script src="~/script/plugins.js"></script>
     <script src="~/script/script.js"></script>
+    <script src="~/script/script1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
 
@@ -44,29 +45,27 @@
                         <h2>FarmaSupply</h2>
                     </a>
                 </div>
-                <div class="offcanvas-body ">
-                    <ul class="navbar-nav  flex-grow-1">
+                <div class="offcanvas-body d-flex justify-content-end align-items-center">
+                    <ul class="navbar-nav flex-grow-1">
                         @if (currentController == "Home" && currentAction == "Index")
                         {
-                            <li class="nav-list mx-3">
-                                <a class="nav-link px-2" href="/auth/login">
+                            <li class="btn btn-outline-dark mx-2">
+                                <a href="/auth/login">
                                     Iniciar sesión
                                 </a>
                             </li>
-                            <li class="nav-list mx-3">
-                                <a class="nav-link px-2" href="/auth/crear-cuenta">
+                            <li class="btn btn-outline-dark mx-2">
+                                <a  href="/auth/crear-cuenta">
                                     Crear cuenta
                                 </a>
                             </li>
                         }
-                        @if ((currentController == "Login" && currentAction == "Login")
-                        ||
-                        (currentController == "Tienda" && currentAction == "RegistrarTiendaGet")
-                        ||
-                        (currentController == "Tienda" && currentAction == "RegistrarTiendaPost"))
+                        @if (currentController == "Login" && currentAction == "Login")
+                        
+                        
                         {
-                            <li class="nav-list mx-3">
-                                <a class="nav-link px-2" href="/">
+                            <li class="btn btn-outline-dark mx-2">
+                                <a  href="/">
                                     Volver
                                 </a>
                             </li>
@@ -76,8 +75,8 @@
                         ||
                         (currentController == "SolicitarRecuperacion" && currentAction == "MostrarVistaIniciarRecuperacion"))
                         {
-                            <li class="nav-list mx-3">
-                                <a class="nav-link px-2" href="/auth/login">
+                            <li class="btn btn-outline-dark mx-2">
+                                <a  href="/auth/login">
                                     Iniciar sesión
                                 </a>
                             </li>
@@ -91,20 +90,25 @@
                         ||
                         (currentController == "Tienda" && currentAction == "EliminarTienda")
                         ||
-                        (currentController == "Tienda" && currentAction == "MostrarMisTiendas"))
+                        (currentController == "Tienda" && currentAction == "MostrarMisTiendas")
+                        ||
+                        (currentController == "Tienda" && currentAction == "RegistrarTiendaGet")
+                        ||
+                        (currentController == "Tienda" && currentAction == "RegistrarTiendaPost"))
                         {
-                            <li class="nav-list mx-3">
-                                <a class="nav-link px-2" href="/privada/home">
+                            <li class="btn btn-outline-dark mx-2">
+                                <a  href="/privada/home">
                                     Volver
                                 </a>
                             </li>
+                           
                         }
                         @if (currentController == "Administracion"
                         &&
                         (currentAction == "MostrarFormularioEdicion" || currentAction == "RegistroUsuarioDesdeAdminGet"))
                         {
-                            <li class="nav-list mx-3">
-                                <a class="nav-link px-2" href="/privada/administracion-usuarios">
+                            <li class="btn btn-outline-dark mx-2">
+                                <a  href="/privada/administracion-usuarios">
                                     Volver a Administracion usuarios
                                 </a>
                             </li>
@@ -114,25 +118,25 @@
                         
                             @if (User.IsInRole("ROLE_ADMIN") && currentController == "Login")
                             {
-                                <li class="nav-list mx-3">
-                                    <a class="nav-link px-2" href="/privada/administracion-usuarios">Listado usuarios</a>
+                                <li class="btn btn-outline-dark mx-2">
+                                    <a  href="/privada/administracion-usuarios">Listado usuarios</a>
                                 </li>
 
                             }
                             @if (User.IsInRole("ROLE_USER") && currentController == "Login")
                             {
-                                <li class="nav-list mx-3">
-                                    <a class="nav-link px-2" href="/privada/administracion-usuarios">Editar usuario</a>
+                                <li class="btn btn-outline-dark mx-2">
+                                    <a  href="/privada/administracion-usuarios">Editar usuario</a>
                                 </li>
-                                <li class="nav-list mx-3">
-                                    <a class="nav-link px-2" href="/privada/registroTienda">Registrar tienda</a>
+                                <li class="btn btn-outline-dark mx-2">
+                                    <a  href="/privada/registroTienda">Registrar tienda</a>
                                 </li>
 
                             }
                            
                             <li class="nav-list mx-3">
                                 <form asp-action="CerrarSesion" method="post" id="logoutForm">
-                                    <button type="button" class="btn buttonPrincipal" onclick="confirmarLogout()">Cerrar sesión</button>
+                                    <button type="button" class="btn btn-outline-dark mx-2" onclick="confirmarLogout()">Cerrar sesión</button>
                                 </form>
                             </li>
                         }

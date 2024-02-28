@@ -2,7 +2,9 @@
 
 @{
     ViewData["Title"] = "registro";
-    
+    var altaTiendaError = ViewData["error"] as string;
+    var altaTiendaErrorDireccion = ViewData["altaTiendaErrorDireccion"] as string;
+    var altaTiendaErrorNombre = ViewData["altaTiendaErrorNombre"] as string;
     
 }
 
@@ -43,4 +45,24 @@
                 </div>
             </div>
         </div>
+
+    @if (!string.IsNullOrEmpty(altaTiendaError))
+    {
+        <script>
+            mostrarNotificacion("¡Error al registrar tu tienda!", "No se pudo registrar su nueva tienda, intentelo de nuevo.", 'error');
+        </script>
+    }
+    @if (!string.IsNullOrEmpty(altaTiendaErrorDireccion))
+    {
+        <script>
+            mostrarNotificacion("¡Error al registrar tu tienda!", "Ya existe una tienda con esa direccion", 'error');
+        </script>
+    }
+
+    @if (!string.IsNullOrEmpty(altaTiendaErrorNombre))
+    {
+        <script>
+            mostrarNotificacion("¡Error al registrar tu tienda!", "Ya existe una tienda con ese nombre", 'error');
+        </script>
+    }
     </section>

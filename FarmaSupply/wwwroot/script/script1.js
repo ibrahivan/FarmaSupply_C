@@ -29,6 +29,14 @@ function revisarContraseña() {
     }
 }
 
+function confirmarEliminarTienda(event) {
+    const idTienda = event.currentTarget.getAttribute("data-id");
+    confirmar("eliminar").then(function (confirmado) {
+        if (confirmado) {
+            window.location.href = 'https://localhost:7233/privada/eliminar-tienda/' + idTienda;
+        }
+    });
+}
 
 function mostrarNotificacion(titulo, mensaje, tipo) {
     Swal.fire({
@@ -82,11 +90,3 @@ function confirmarEliminar(event) {
     });
 }
 
-function confirmarEliminarTienda(event) {
-    const idTienda = event.currentTarget.getAttribute("data-id");
-    confirmar("eliminarTienda").then(function (confirmado) {
-        if (confirmado) {
-            window.location.href = 'https://localhost:7233/privada/eliminar-tienda/' + idTienda;
-        }
-    });
-}

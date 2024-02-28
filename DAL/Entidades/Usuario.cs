@@ -67,17 +67,14 @@ namespace DAL.Entidades
         [Column("foto_usuario")]
         public byte[]? Foto { get; set; }
 
-        public virtual ICollection<Tienda> List_Usu_Tie { get; set; } = new List<Tienda>();
+        public virtual ICollection<Tienda> Tiendas { get; set; } = new List<Tienda>();
 
 
 
 
         public Usuario() { }
 
-        public Usuario(string nombreUsuario, string apellidosUsuario, string dniUsuario, string tlfUsuario,
-                       string emailUsuario, string claveUsuario, string token, DateTime? expiracionToken,
-                       string rol, bool cuentaConfirmada, byte[] foto,
-                        ICollection<Tienda> list_Usu_Tie)
+        public Usuario(string? nombreUsuario, string? apellidosUsuario, string? dniUsuario, string? tlfUsuario, string? emailUsuario, string? claveUsuario, string? token, DateTime? expiracionToken, string? rol, bool cuentaConfirmada, byte[]? foto, ICollection<Tienda> tiendas)
         {
             NombreUsuario = nombreUsuario;
             ApellidosUsuario = apellidosUsuario;
@@ -90,8 +87,7 @@ namespace DAL.Entidades
             Rol = rol;
             CuentaConfirmada = cuentaConfirmada;
             Foto = foto;
-       
-            List_Usu_Tie = list_Usu_Tie;
+            Tiendas = tiendas;
         }
     }
 }

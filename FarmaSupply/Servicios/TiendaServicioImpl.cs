@@ -29,7 +29,7 @@ namespace FarmaSupply.Servicios
             {
                 EscribirLog.escribirEnFicheroLog("[INFO] Entrando en el método registrarTienda() de la clase TiendaServicioImpl");
 
-                Usuario? usuarioPropietario = _contexto.Usuarios.Find(tiendaDTO.idUsuario_Tie);
+                Usuario? usuarioPropietario = _contexto.Usuarios.Find(tiendaDTO.IdPropietario);
                 // Comprueba si ya existe una tienda con el nombre que quiere registrar
                 var tiendaDaoNombre = _contexto.Tiendas.FirstOrDefault((t => t.NombreTienda == tiendaDTO.NombreTienda));
 
@@ -48,21 +48,17 @@ namespace FarmaSupply.Servicios
                     tiendaDTO.DireccionTienda=null;
                     return tiendaDTO;
                 }
+                
                 Tienda tienda = _convertirAdao.tiendaToDao(tiendaDTO);
 
                 if (usuarioPropietario != null)
-                     tienda.IdUsuario_Tie = usuarioPropietario;
+                    tienda.IdUsuarioPropietarioNavigation = usuarioPropietario;
 
-
-                tiendaDTO.Id= tienda.IdTienda;
-                _contexto.Tiendas.Add(tienda);
-                _contexto.SaveChanges();
-
-
-
-
-                EscribirLog.escribirEnFicheroLog("[INFO] Saliendo del método registraTienda() de la clase TiendaServicioImpl");
-
+                tienda.IdUsuarioPropietario = tienda.IdUsuarioPropietarioNavigation.IdUsuario;
+                 _contexto.Tiendas.Add(tienda);
+                 _contexto.SaveChanges();
+                    EscribirLog.escribirEnFicheroLog("[INFO] Saliendo del método registraTienda() de la clase TiendaServicioImpl");
+                
                 return tiendaDTO;
             }
             catch (DbUpdateException dbe)
@@ -119,10 +115,24 @@ namespace FarmaSupply.Servicios
                 EscribirLog.escribirEnFicheroLog($"[Error TiendaServicioImpl - eliminarTienda()] Error de persistencia al eliminar una tienda por su id: {dbe.Message}");
             }
         }
+        public List<TiendaDTO> obtenerTiendasPorPropietarioId(long id)
+        {
+            try
+            {
+                EscribirLog.escribirEnFicheroLog("[INFO] Entrando en el método obtenerTiendasPorPropietarioId() de la clase TiendaServicioImpl");
 
-       
+                List<Tienda> listaTiendas = _contexto.Tiendas.Where(t => t.IdUsuarioPropietario == id).ToList();
+                return _convertirAdto.listaTiendaToDto(listaTiendas);
+            }
+            catch (ArgumentNullException e)
+            {
+                EscribirLog.escribirEnFicheroLog($"[ERROR TiendaServicioImpl - obtenerTiendasPorPropietarioId()] - Argumento id es NULL al obtener las tiendas de un usuario: {e}");
+                return null;
+            }
+        }
 
-       
+
+
     }
 }
 

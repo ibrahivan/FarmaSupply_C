@@ -13,20 +13,19 @@ namespace FarmaSupply.DTO
         public string CodigopostalTienda { get; set; }
         public List<PedidoDTO> MisPedidos { get; set; } = new List<PedidoDTO>();
 
-        public long idUsuario_Tie { get; set; }
+        public long IdPropietario { get; set; }
     
         public TiendaDTO()
         {
         }
 
-        public TiendaDTO(string nombreTienda, string direccionTienda, string codigopostalTienda, List<PedidoDTO> misPedidos, long idUsuario_Tie)
+        public TiendaDTO(string nombreTienda, string direccionTienda, string codigopostalTienda, List<PedidoDTO> misPedidos, long idPropietario)
         {
             NombreTienda = nombreTienda;
             DireccionTienda = direccionTienda;
             CodigopostalTienda = codigopostalTienda;
             MisPedidos = misPedidos;
-            this.idUsuario_Tie = idUsuario_Tie;
-          
+            IdPropietario = idPropietario;
         }
     }
 }
