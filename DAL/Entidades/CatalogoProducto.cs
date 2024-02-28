@@ -18,7 +18,12 @@ namespace DAL.Entidades
         [Column("id_catalogo_producto")]
         public long IdCatalogoProducto { get; set; }
 
-        
+        [Column("nombre_producto")]
+        public String NombreProducto { get; set; }
+
+        [Column("precio_unitario_producto")]
+        public int PrecioUnitario { get; set; }
+
         [Column("cantidad_producto")]
         public int Cantidad { get; set; }
 

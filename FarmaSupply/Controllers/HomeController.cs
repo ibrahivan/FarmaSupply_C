@@ -1,4 +1,4 @@
-using FarmaSupply.Models;
+﻿using FarmaSupply.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
@@ -18,7 +18,7 @@ namespace FarmaSupply.Controllers
 
         public IActionResult Index()
         {
-            EscribirLog.escribirEnFicheroLog("[INFO] Entrando en el m�todo  Index() de la clase HomeController");
+            EscribirLog.escribirEnFicheroLog("[INFO] Entrando en el método  Index() de la clase HomeController");
 
             HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
 

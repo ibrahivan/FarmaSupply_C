@@ -55,6 +55,15 @@ namespace DAL.Migrations
                         .HasColumnType("text")
                         .HasColumnName("descripcion_producto");
 
+                    b.Property<string>("NombreProducto")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("nombre_producto");
+
+                    b.Property<int>("PrecioUnitario")
+                        .HasColumnType("integer")
+                        .HasColumnName("precio_unitario_producto");
+
                     b.HasKey("IdCatalogoProducto");
 
                     b.ToTable("catalogoProductos", "fs_logica");
@@ -69,17 +78,16 @@ namespace DAL.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("IdPedido"));
 
-                    b.Property<long>("id_tienda")
-                        .HasColumnType("bigint");
+                    b.Property<int>("PrecioPedido")
+                        .HasColumnType("integer")
+                        .HasColumnName("precio_pedido");
 
-                    b.Property<long>("id_usuario")
+                    b.Property<long>("id_tienda")
                         .HasColumnType("bigint");
 
                     b.HasKey("IdPedido");
 
                     b.HasIndex("id_tienda");
-
-                    b.HasIndex("id_usuario");
 
                     b.ToTable("pedidos", "fs_logica");
                 });
@@ -213,15 +221,7 @@ namespace DAL.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("DAL.Entidades.Usuario", "IdUsuario_Ped")
-                        .WithMany("List_Usu_Ped")
-                        .HasForeignKey("id_usuario")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("IdPedido_Tie");
-
-                    b.Navigation("IdUsuario_Ped");
                 });
 
             modelBuilder.Entity("DAL.Entidades.Tienda", b =>
@@ -242,8 +242,6 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("DAL.Entidades.Usuario", b =>
                 {
-                    b.Navigation("List_Usu_Ped");
-
                     b.Navigation("List_Usu_Tie");
                 });
 #pragma warning restore 612, 618

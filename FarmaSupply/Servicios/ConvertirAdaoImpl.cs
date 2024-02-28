@@ -23,7 +23,25 @@ namespace FarmaSupply.Servicios
 
         public List<Tienda> listTiendaToDao(List<TiendaDTO> listaTiendaDTO)
         {
-            throw new NotImplementedException();
+            List<Tienda> listaTiendaDao = new List<Tienda>();
+
+            try
+            {
+                EscribirLog.escribirEnFicheroLog("[INFO] Entrando en el método listTiendaToDao() de la clase ConvertirAdaoImpl");
+                foreach (TiendaDTO tiendaDTO in listaTiendaDTO)
+                {
+                    listaTiendaDao.Add(tiendaToDao(tiendaDTO));
+                }
+                EscribirLog.escribirEnFicheroLog("[INFO] Saliendo del método listTiendaToDao() de la clase ConvertirAdaoImpl");
+                return listaTiendaDao;
+            }
+            catch (Exception e)
+            {
+                EscribirLog.escribirEnFicheroLog($"\n[ERROR ConvertirAdaoImpl - listTiendaToDao()] - Al convertir lista de usuarioDTO a lista de tiendaDAO (return null): {e}");
+                Console.WriteLine("\n[ERROR TiendaToDaoImpl - tolistTiendaToDao()] - Al convertir lista de tiendaDTO a lista de tiendaDAO (devolviendo null): " + e);
+            }
+
+            return null;
         }
 
         public List<Usuario> listUsuarioToDao(List<UsuarioDTO> listaUsuarioDTO)
@@ -57,8 +75,31 @@ namespace FarmaSupply.Servicios
 
         public Tienda tiendaToDao(TiendaDTO tiendaDTO)
         {
-            throw new NotImplementedException();
+            try
+
+            {
+                EscribirLog.escribirEnFicheroLog("[INFO] Entrando en el método tiendaToDao() de la clase ConvertirAdaoImpl");
+
+                Tienda tiendaDao = new Tienda();
+                tiendaDao.IdTienda = tiendaDTO.Id;
+                tiendaDao.NombreTienda = tiendaDTO.NombreTienda;
+                tiendaDao.DireccionTienda = tiendaDTO.DireccionTienda;
+                tiendaDao.CodigopostalTienda = tiendaDTO.CodigopostalTienda;
+               
+
+
+                EscribirLog.escribirEnFicheroLog("[INFO] Saliendo del método tiendaToDao() de la clase ConvertirAdaoImpl");
+                return tiendaDao;
+            }
+            catch (Exception e)
+            {
+                EscribirLog.escribirEnFicheroLog($"\n[ERROR ConvertirAdaoImpl - tiendaToDao()] - Al convertir TiendaDTO a TiendaDAO (return null): {e}");
+                Console.WriteLine("\n[ERROR TiendaToDaoImpl - toTiendaDao()] - Al convertir TiendaDTO a TiendaDAO (devolviendo null): " + e);
+                return null;
+            }
+
         }
+    
 
         public Usuario usuarioToDao(UsuarioDTO usuarioDTO)
         {
@@ -68,6 +109,7 @@ namespace FarmaSupply.Servicios
                 EscribirLog.escribirEnFicheroLog("[INFO] Entrando en el método usuarioToDao() de la clase ConvertirAdaoImpl");
                 
                 Usuario usuarioDao = new Usuario();
+                usuarioDao.IdUsuario=usuarioDTO.Id;
                 usuarioDao.NombreUsuario = usuarioDTO.NombreUsuario;
                 usuarioDao.ApellidosUsuario = usuarioDTO.ApellidosUsuario;
                 usuarioDao.EmailUsuario = usuarioDTO.EmailUsuario;

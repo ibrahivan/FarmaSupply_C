@@ -1,0 +1,110 @@
+﻿@model FarmaSupply.DTO.TiendaDTO
+
+@{
+    ViewData["Title"] = "listado";
+    var altaTiendaError = ViewData["error"] as string;
+    var altaTiendaErrorDireccion = ViewData["altaTiendaErrorDireccion"] as string;
+    var altaTiendaErrorNombre = ViewData["altaTiendaErrorNombre"] as string;
+    var eliminacionCorrecta = ViewData["eliminacionCorrecta"] as string;
+    var eliminacionError = ViewData["error"] as string;
+    var altaTiendaExito = ViewData["altaTiendaExito"] as string;
+   
+    
+}
+
+
+    <div class="container py-4 mt-5">
+        <div class="card bg-light">
+        
+            <div class="card-header">
+            
+                <h4>Listado de tus tiendas</h4>
+            </div>
+        
+      
+            <div class="card-body">
+            @if (ViewBag.MisTiendas!=null)
+            {
+                <h4 class="card-title">
+                    <a asp-controller="Tienda" asp-action="RegistrarTiendaGet" role="button" class="btn buttonPrincipal p-2 mb-3"><h5>Registrar tienda</h5></a>
+                </h4>
+                <table class="table table-striped table-bordered">
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th class="tableCustom">id</th>
+                            <th class="tableCustom">Nombre tienda</th>
+                            <th class="tableCustom">Dirección</th>
+                            <th class="tableCustom">Código postal</th>
+                           
+                            <th class="tableCustom"></th>
+                        
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var tienda in ViewBag.MisTiendas)
+                        {
+                            <tr>
+                                <td>@tienda.Id</td>
+                                <td>@tienda.NombreTienda</td>
+                                <td>@tienda.DireccionTienda</td>
+                                <td>@tienda.CodigopostalTienda</td>
+                               
+                                <td>
+                                    <a class="btn btn-danger" data-id="@tienda.Id" onclick="confirmarEliminarTienda(event)">
+                                        <i class="bi bi-trash"> Eliminar</i>
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <h5 class="card-title text-center text-danger">No hay tiendas registradas</h5>
+            }
+        </div>
+    </div>
+</div>
+
+   
+    @if (!string.IsNullOrEmpty(altaTiendaExito))
+    {
+        <script>
+        mostrarNotificacion("¡La tienda fue registrado!", "Se ha dado de alta su nueva tienda correctamente", 'info');
+        </script>
+    }
+@if (!string.IsNullOrEmpty(altaTiendaError))
+{
+    <script>
+        mostrarNotificacion("¡Error al registrar tu tienda!", "No se pudo registrar su nueva tienda, intentelo de nuevo.", 'error');
+    </script>
+}
+   
+@if (!string.IsNullOrEmpty(altaTiendaErrorDireccion))
+{
+    <script>
+        mostrarNotificacion("¡Error al registrar tu tienda!", "Ya existe una tienda con esa direccion", 'error');
+    </script>
+}
+   
+@if (!string.IsNullOrEmpty(altaTiendaErrorNombre))
+{
+    <script>
+        mostrarNotificacion("¡Error al registrar tu tienda!", "Ya existe una tienda con ese nombre", 'error');
+    </script>
+}
+@if (!string.IsNullOrEmpty(eliminacionCorrecta))
+{
+    <script>
+        mostrarNotificacion("¡Tienda eliminada!", "La tienda ha sido eliminada correctamente", 'success');
+    </script>
+}
+@if (!string.IsNullOrEmpty(eliminacionError))
+{
+    <script>
+        mostrarNotificacion("¡Error!", "Ocurrio un error no esperado, intentelo de nuevo", 'error');
+    </script>
+}
+

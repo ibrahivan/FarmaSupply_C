@@ -39,8 +39,10 @@ namespace DAL.Entidades
         public long id_usuario { get; set; }
         [ForeignKey("id_usuario")]
         public Usuario IdUsuario_Tie { get; set; }
-        //
+
+
         public virtual ICollection<Pedido> List_Tie_Ped { get; set; } = new List<Pedido>();
+
 
         public Tienda() { }
 

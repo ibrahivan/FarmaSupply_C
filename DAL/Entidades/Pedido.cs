@@ -20,10 +20,9 @@ namespace DAL.Entidades
         public long IdPedido { get; set; }
 
 
-        //Para la relacion pedido-usuario
-        public long id_usuario { get; set; }
-        [ForeignKey("id_usuario")]
-        public Usuario IdUsuario_Ped { get; set; }
+        [Column("precio_pedido")]
+        public int PrecioPedido { get; set; }
+
         //
         //Para la relacion pedido-tienda
         public long id_tienda { get; set; }
@@ -37,11 +36,12 @@ namespace DAL.Entidades
         //Constructores
         public Pedido() { }
 
-        public Pedido( Usuario idUsuario_Ped, Tienda idPedido_Tie)
+        public Pedido(int precioPedido, long id_tienda, Tienda idPedido_Tie, List<CatalogoProducto> list_Ped_Cat)
         {
-            
-            IdUsuario_Ped = idUsuario_Ped;
+            PrecioPedido = precioPedido;
+            this.id_tienda = id_tienda;
             IdPedido_Tie = idPedido_Tie;
+            List_Ped_Cat = list_Ped_Cat;
         }
     }
 }

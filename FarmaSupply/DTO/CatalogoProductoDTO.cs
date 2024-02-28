@@ -5,19 +5,22 @@
     /// </summary>
     public class CatalogoProductoDTO
     {
-        public long IdCatalogoProducto { get; set; }
-        public int Cantidad { get; set; }
-        public String Descripcion { get; set; }
-
+        public long IdCatalogoProducto;
+        public int Cantidad;
+        public String Descripcion;
+        public String NombreProducto;
+        public int PrecioUnitario;
         //Cons
         public CatalogoProductoDTO()
         {
         }
 
-        public CatalogoProductoDTO(int cantidad, string descripcion)
+        public CatalogoProductoDTO(int cantidad, string descripcion, string nombreProducto, int precioUnitario)
         {
             Cantidad = cantidad;
             Descripcion = descripcion;
+            NombreProducto = nombreProducto;
+            PrecioUnitario = precioUnitario;
         }
     }
 }

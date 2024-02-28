@@ -55,7 +55,6 @@ namespace DAL.Entidades
         public string? Token { get; set; }
 
         [Column(TypeName = "timestamp without time zone")]
-        
         public DateTime? ExpiracionToken { get; set; }
 
         [Column("rol_usuario")]
@@ -68,16 +67,17 @@ namespace DAL.Entidades
         [Column("foto_usuario")]
         public byte[]? Foto { get; set; }
 
-        public virtual ICollection<Pedido> List_Usu_Ped { get; set; } = new List<Pedido>();
-
         public virtual ICollection<Tienda> List_Usu_Tie { get; set; } = new List<Tienda>();
+
+
+
 
         public Usuario() { }
 
         public Usuario(string nombreUsuario, string apellidosUsuario, string dniUsuario, string tlfUsuario,
                        string emailUsuario, string claveUsuario, string token, DateTime? expiracionToken,
                        string rol, bool cuentaConfirmada, byte[] foto,
-                       ICollection<Pedido> list_Usu_Ped, ICollection<Tienda> list_Usu_Tie)
+                        ICollection<Tienda> list_Usu_Tie)
         {
             NombreUsuario = nombreUsuario;
             ApellidosUsuario = apellidosUsuario;
@@ -90,7 +90,7 @@ namespace DAL.Entidades
             Rol = rol;
             CuentaConfirmada = cuentaConfirmada;
             Foto = foto;
-            List_Usu_Ped = list_Usu_Ped;
+       
             List_Usu_Tie = list_Usu_Tie;
         }
     }

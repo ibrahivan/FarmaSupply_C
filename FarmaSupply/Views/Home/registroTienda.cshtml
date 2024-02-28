@@ -1,0 +1,46 @@
+﻿@model FarmaSupply.DTO.TiendaDTO
+
+@{
+    ViewData["Title"] = "registro";
+    
+    
+}
+
+    <section id="hero">
+        <div class="hero container py-5 my-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 mt-2 py-5">
+                <div class="col-10 col-sm-8 col-lg-6 py-md-5 my-md-5">
+                    <img src="~/css/assets/scooter.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                         width="700" height="500" loading="lazy">
+                </div>
+                <div class="col-lg-6 py-md-5 my-md-5">
+                <form id="form4" class="form-group flex-wrap p-3" asp-action="RegistrarTiendaPost" asp-controller="Tienda" method="post" asp-for="UsuarioDTO">
+                        <input type="hidden" name="returnUrl" value="@TempData["ReturnUrl"]" />
+                        <div class="form-input col-lg-12 my-4">
+                        <label for="NombreTienda" class="form-label fs-6 text-uppercase fw-bold text-black">Nombre tienda</label>
+                        <input type="text" id="NombreTienda" name="NombreTienda" class="form-control ps-3" required />
+                                   
+                        </div>
+                        <div class="form-input col-lg-12 my-4">
+                        <label for="DireccionTienda" class="form-label fs-6 text-uppercase fw-bold text-black">Dirección</label>
+                        <input type="text" id="DireccionTienda" name="DireccionTienda" class="form-control ps-3" required />
+                        </div>
+                        <div class="form-input col-lg-12 my-4">
+                        <label for="CodigopostalTienda" class="form-label fs-6 text-uppercase fw-bold text-black">Código postal</label>
+                        <input type="text" id="CodigopostalTienda" name="CodigopostalTienda" class="form-control ps-3" required />
+                        </div>
+                  
+                        
+                        
+                        <div class="d-grid my-3">
+                            <button class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6"
+                                    type="submit" id="btnRegistro">
+                                Registrar tienda
+                            </button>
+                        
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>

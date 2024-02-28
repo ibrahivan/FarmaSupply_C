@@ -19,6 +19,7 @@ builder.Services.AddScoped<IServicioEncriptar, EncriptarServicioImpl>();
 builder.Services.AddScoped<IConvertirAdto, ConvertirAdtoImpl>();
 builder.Services.AddScoped<IConvertirAdao, ConvertirAdaoImpl>();
 builder.Services.AddScoped<IServicioEmail, EmailServicioImpl>();
+builder.Services.AddScoped<ITiendaServicio, TiendaServicioImpl>();
 
 
 builder.Services.AddAuthentication(options =>

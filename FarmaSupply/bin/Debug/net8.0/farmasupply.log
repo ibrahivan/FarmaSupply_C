@@ -2697,3 +2697,455 @@
 14/02/2024 04:32:32 [INFO] Saliendo del método Encriptar() de la clase ServicioEncriptarImpl
 14/02/2024 04:32:32 [INFO] Saliendo del método verificarCredenciales() de la clase UsuarioServicioImpl. Username no encontrado
 14/02/2024 04:32:32 [INFO] Saliendo del método ProcesarInicioSesion() de la clase LoginController. Credenciales inválidas o cuenta no confirmada. Inténtelo de nuevo.
+28/02/2024 12:09:57 [INFO] Entrando en el método  Index() de la clase HomeController
+28/02/2024 12:10:05 [INFO] Entrando en el método RegistrarGet() de la clase RegistroController
+28/02/2024 12:12:33 [INFO] Entrando en el método  Index() de la clase HomeController
+28/02/2024 12:12:36 [INFO] Entrando en el método RegistrarGet() de la clase RegistroController
+28/02/2024 12:13:09 [INFO] Entrando en el método RegistrarPost() de la clase RegistroController
+28/02/2024 12:13:09 [INFO] Entrando en el método registrarUsuario() de la clase UsuarioServicioImpl
+28/02/2024 12:13:11 [INFO] Entrando en el método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 12:13:11 [INFO] Saliendo del método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 12:13:11 [INFO] Entrando en el método usuarioToDao() de la clase ConvertirAdaoImpl
+28/02/2024 12:13:11 [INFO] Saliendo del método usuarioToDao() de la clase ConvertirAdaoImpl
+28/02/2024 12:13:11 [INFO] Entrando en el método generarToken() de la clase UsuarioServicioImpl
+28/02/2024 12:13:11 [INFO] Saliendo del método generarToken() de la clase UsuarioServicioImpl
+28/02/2024 12:13:12 [INFO] Entrando en el método enviarEmailConfirmacion() de la clase ServicioEmailImpl
+28/02/2024 12:13:14 [INFO] Saliendo del método enviarEmailConfirmacion() de la clase ServicioEmailImpl
+28/02/2024 12:13:14 [INFO] Saliendo del método registrarUsuario() de la clase UsuarioServicioImpl
+28/02/2024 12:13:14 [INFO] Saliendo del método RegistrarGet() de la clase RegistroController. Registro del nuevo usuario OK
+28/02/2024 12:13:22 [INFO] Entrando en el método ConfirmarCuenta() de la clase LoginController
+28/02/2024 12:13:22 [INFO] Entrando en el método confirmarCuenta() de la clase UsuarioServicioImpl
+28/02/2024 12:13:22 [INFO] Saliendo del método confirmarCuenta() de la clase UsuarioServicioImpl. Cuenta confirmada OK.
+28/02/2024 12:13:22 [INFO] Saliendo del método ConfirmarCuenta() de la clase LoginController. La dirección de correo ha sido confirmada correctamente
+28/02/2024 12:13:27 [INFO] Entrando en el método ProcesarInicioSesion() de la clase LoginController
+28/02/2024 12:13:27 [INFO] Entrando en el método verificarCredenciales() de la clase UsuarioServicioImpl
+28/02/2024 12:13:27 [INFO] Entrando en el método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 12:13:27 [INFO] Saliendo del método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 12:13:27 [INFO] Saliendo del método verificarCredenciales() de la clase UsuarioServicioImpl
+28/02/2024 12:13:27 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:13:27 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:13:27 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:13:27 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:13:27 [INFO] Saliendo del método ProcesarInicioSesion() de la clase LoginController
+28/02/2024 12:13:28 [INFO] Entrando en el método Home() de la clase LoginController
+28/02/2024 12:13:33 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:13:33 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:13:33 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:13:33 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:13:33 [INFO] Saliendo del método ListadoUsuarios() de la clase AdministracionUsuariosController
+28/02/2024 12:13:37 [INFO] Entrando en el método Home() de la clase LoginController
+28/02/2024 12:18:47 [INFO] Entrando en el método  Index() de la clase HomeController
+28/02/2024 12:18:53 [INFO] Entrando en el método Login() de la clase LoginController
+28/02/2024 12:18:57 [INFO] Entrando en el método ProcesarInicioSesion() de la clase LoginController
+28/02/2024 12:18:57 [INFO] Entrando en el método verificarCredenciales() de la clase UsuarioServicioImpl
+28/02/2024 12:18:57 [INFO] Entrando en el método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 12:18:57 [INFO] Saliendo del método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 12:18:59 [INFO] Saliendo del método verificarCredenciales() de la clase UsuarioServicioImpl
+28/02/2024 12:18:59 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:18:59 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:18:59 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:18:59 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:18:59 [INFO] Saliendo del método ProcesarInicioSesion() de la clase LoginController
+28/02/2024 12:18:59 [INFO] Entrando en el método Home() de la clase LoginController
+28/02/2024 12:20:48 [INFO] Entrando en el método  Index() de la clase HomeController
+28/02/2024 12:20:51 [INFO] Entrando en el método Login() de la clase LoginController
+28/02/2024 12:20:56 [INFO] Entrando en el método ProcesarInicioSesion() de la clase LoginController
+28/02/2024 12:20:56 [INFO] Entrando en el método verificarCredenciales() de la clase UsuarioServicioImpl
+28/02/2024 12:20:56 [INFO] Entrando en el método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 12:20:56 [INFO] Saliendo del método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 12:20:58 [INFO] Saliendo del método verificarCredenciales() de la clase UsuarioServicioImpl
+28/02/2024 12:20:58 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:20:58 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:20:58 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:20:58 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:20:58 [INFO] Saliendo del método ProcesarInicioSesion() de la clase LoginController
+28/02/2024 12:20:58 [INFO] Entrando en el método Home() de la clase LoginController
+28/02/2024 12:21:00 [INFO] Entrando en el método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 12:21:00 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:21:00 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:21:00 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:21:00 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:21:00 [INFO] Saliendo del método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 12:22:21 [INFO] Entrando en el método  Index() de la clase HomeController
+28/02/2024 12:22:25 [INFO] Entrando en el método Login() de la clase LoginController
+28/02/2024 12:22:30 [INFO] Entrando en el método ProcesarInicioSesion() de la clase LoginController
+28/02/2024 12:22:30 [INFO] Entrando en el método verificarCredenciales() de la clase UsuarioServicioImpl
+28/02/2024 12:22:30 [INFO] Entrando en el método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 12:22:30 [INFO] Saliendo del método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 12:22:32 [INFO] Saliendo del método verificarCredenciales() de la clase UsuarioServicioImpl
+28/02/2024 12:22:32 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:22:32 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:22:32 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:22:32 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:22:32 [INFO] Saliendo del método ProcesarInicioSesion() de la clase LoginController
+28/02/2024 12:22:32 [INFO] Entrando en el método Home() de la clase LoginController
+28/02/2024 12:22:39 [INFO] Entrando en el método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 12:22:39 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:22:39 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:22:39 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:22:39 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:22:39 [INFO] Saliendo del método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 12:24:48 [INFO] Entrando en el método  Index() de la clase HomeController
+28/02/2024 12:24:54 [INFO] Entrando en el método Login() de la clase LoginController
+28/02/2024 12:24:58 [INFO] Entrando en el método ProcesarInicioSesion() de la clase LoginController
+28/02/2024 12:24:58 [INFO] Entrando en el método verificarCredenciales() de la clase UsuarioServicioImpl
+28/02/2024 12:24:58 [INFO] Entrando en el método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 12:24:58 [INFO] Saliendo del método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 12:25:00 [INFO] Saliendo del método verificarCredenciales() de la clase UsuarioServicioImpl
+28/02/2024 12:25:00 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:25:00 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:25:00 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:25:00 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:25:00 [INFO] Saliendo del método ProcesarInicioSesion() de la clase LoginController
+28/02/2024 12:25:00 [INFO] Entrando en el método Home() de la clase LoginController
+28/02/2024 12:25:03 [INFO] Entrando en el método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 12:25:03 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:25:03 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:25:03 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:25:03 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:25:03 [INFO] Saliendo del método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 12:25:18 [INFO] Entrando en el método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 12:25:18 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:25:18 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:25:18 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:25:18 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:25:18 [INFO] Entrando en el método registrarTienda() de la clase TiendaServicioImpl
+28/02/2024 12:25:18 [INFO] Entrando en el método tiendaToDao() de la clase ConvertirAdaoImpl
+28/02/2024 12:25:18 [INFO] Saliendo del método tiendaToDao() de la clase ConvertirAdaoImpl
+28/02/2024 12:25:18 [INFO] Saliendo del método registraTienda() de la clase TiendaServicioImpl
+28/02/2024 12:25:18 [INFO] Saliendo del método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 12:26:13 [INFO] Entrando en el método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 12:26:13 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:26:13 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:26:13 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:26:13 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:26:13 [INFO] Entrando en el método registrarTienda() de la clase TiendaServicioImpl
+28/02/2024 12:26:13 [INFO] Saliendo del método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 12:26:27 [INFO] Entrando en el método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 12:26:27 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:26:27 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:26:27 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:26:27 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:26:27 [INFO] Entrando en el método registrarTienda() de la clase TiendaServicioImpl
+28/02/2024 12:26:27 [INFO] Entrando en el método tiendaToDao() de la clase ConvertirAdaoImpl
+28/02/2024 12:26:27 [INFO] Saliendo del método tiendaToDao() de la clase ConvertirAdaoImpl
+28/02/2024 12:26:27 [INFO] Saliendo del método registraTienda() de la clase TiendaServicioImpl
+28/02/2024 12:26:27 [INFO] Saliendo del método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 12:26:34 [INFO] Entrando en el método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 12:26:34 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:26:34 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:26:34 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:26:34 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:26:34 [INFO] Saliendo del método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 12:26:54 [INFO] Entrando en el método  Index() de la clase HomeController
+28/02/2024 12:32:59 [INFO] Entrando en el método  Index() de la clase HomeController
+28/02/2024 12:50:08 [INFO] Entrando en el método  Index() de la clase HomeController
+28/02/2024 12:50:24 [INFO] Entrando en el método RegistrarGet() de la clase RegistroController
+28/02/2024 12:50:35 [INFO] Entrando en el método RegistrarPost() de la clase RegistroController
+28/02/2024 12:50:35 [INFO] Entrando en el método registrarUsuario() de la clase UsuarioServicioImpl
+28/02/2024 12:50:37 [INFO] Entrando en el método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 12:50:37 [INFO] Saliendo del método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 12:50:37 [INFO] Entrando en el método usuarioToDao() de la clase ConvertirAdaoImpl
+28/02/2024 12:50:37 [INFO] Saliendo del método usuarioToDao() de la clase ConvertirAdaoImpl
+28/02/2024 12:50:37 [INFO] Entrando en el método generarToken() de la clase UsuarioServicioImpl
+28/02/2024 12:50:37 [INFO] Saliendo del método generarToken() de la clase UsuarioServicioImpl
+28/02/2024 12:50:38 [INFO] Entrando en el método enviarEmailConfirmacion() de la clase ServicioEmailImpl
+28/02/2024 12:50:40 [INFO] Saliendo del método enviarEmailConfirmacion() de la clase ServicioEmailImpl
+28/02/2024 12:50:40 [INFO] Saliendo del método registrarUsuario() de la clase UsuarioServicioImpl
+28/02/2024 12:50:40 [INFO] Saliendo del método RegistrarGet() de la clase RegistroController. Registro del nuevo usuario OK
+28/02/2024 12:50:45 [INFO] Entrando en el método ConfirmarCuenta() de la clase LoginController
+28/02/2024 12:50:45 [INFO] Entrando en el método confirmarCuenta() de la clase UsuarioServicioImpl
+28/02/2024 12:50:45 [INFO] Saliendo del método confirmarCuenta() de la clase UsuarioServicioImpl. Cuenta confirmada OK.
+28/02/2024 12:50:45 [INFO] Saliendo del método ConfirmarCuenta() de la clase LoginController. La dirección de correo ha sido confirmada correctamente
+28/02/2024 12:50:51 [INFO] Entrando en el método ProcesarInicioSesion() de la clase LoginController
+28/02/2024 12:50:51 [INFO] Entrando en el método verificarCredenciales() de la clase UsuarioServicioImpl
+28/02/2024 12:50:51 [INFO] Entrando en el método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 12:50:51 [INFO] Saliendo del método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 12:50:51 [INFO] Saliendo del método verificarCredenciales() de la clase UsuarioServicioImpl
+28/02/2024 12:50:51 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:50:51 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:50:51 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:50:51 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:50:51 [INFO] Saliendo del método ProcesarInicioSesion() de la clase LoginController
+28/02/2024 12:50:51 [INFO] Entrando en el método Home() de la clase LoginController
+28/02/2024 12:50:54 [INFO] Entrando en el método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 12:50:54 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:50:54 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:50:54 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:50:54 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:50:54 [INFO] Saliendo del método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 12:50:59 [INFO] Entrando en el método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 12:50:59 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:50:59 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:50:59 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:50:59 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:50:59 [INFO] Entrando en el método registrarTienda() de la clase TiendaServicioImpl
+28/02/2024 12:50:59 [INFO] Entrando en el método tiendaToDao() de la clase ConvertirAdaoImpl
+28/02/2024 12:50:59 [INFO] Saliendo del método tiendaToDao() de la clase ConvertirAdaoImpl
+28/02/2024 12:50:59 [Error TiendaServicioImpl - registraTienda()] Error de persistencia al actualizar la bbdd: An error occurred while saving the entity changes. See the inner exception for details.
+28/02/2024 12:50:59 [INFO] Saliendo del método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 12:52:15 [INFO] Entrando en el método  Index() de la clase HomeController
+28/02/2024 12:52:19 [INFO] Entrando en el método Login() de la clase LoginController
+28/02/2024 12:52:24 [INFO] Entrando en el método ProcesarInicioSesion() de la clase LoginController
+28/02/2024 12:52:24 [INFO] Entrando en el método verificarCredenciales() de la clase UsuarioServicioImpl
+28/02/2024 12:52:24 [INFO] Entrando en el método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 12:52:24 [INFO] Saliendo del método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 12:52:26 [INFO] Saliendo del método verificarCredenciales() de la clase UsuarioServicioImpl
+28/02/2024 12:52:26 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:52:26 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:52:26 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:52:26 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:52:26 [INFO] Saliendo del método ProcesarInicioSesion() de la clase LoginController
+28/02/2024 12:52:26 [INFO] Entrando en el método Home() de la clase LoginController
+28/02/2024 12:52:27 [INFO] Entrando en el método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 12:52:27 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:52:27 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:52:27 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:52:27 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:52:27 [INFO] Saliendo del método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 12:52:59 [INFO] Entrando en el método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 12:52:59 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:52:59 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:52:59 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:52:59 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:52:59 [INFO] Entrando en el método registrarTienda() de la clase TiendaServicioImpl
+28/02/2024 12:52:59 [INFO] Entrando en el método tiendaToDao() de la clase ConvertirAdaoImpl
+28/02/2024 12:52:59 [INFO] Saliendo del método tiendaToDao() de la clase ConvertirAdaoImpl
+28/02/2024 12:52:59 [Error TiendaServicioImpl - registraTienda()] Error de persistencia al actualizar la bbdd: An error occurred while saving the entity changes. See the inner exception for details.
+28/02/2024 12:52:59 [INFO] Saliendo del método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 12:54:05 [INFO] Entrando en el método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 12:54:05 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:54:05 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:54:05 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:54:05 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:54:05 [INFO] Entrando en el método registrarTienda() de la clase TiendaServicioImpl
+28/02/2024 12:54:05 [INFO] Entrando en el método tiendaToDao() de la clase ConvertirAdaoImpl
+28/02/2024 12:54:05 [INFO] Saliendo del método tiendaToDao() de la clase ConvertirAdaoImpl
+28/02/2024 12:54:05 [Error TiendaServicioImpl - registraTienda()] Error de persistencia al actualizar la bbdd: An error occurred while saving the entity changes. See the inner exception for details.
+28/02/2024 12:54:05 [INFO] Saliendo del método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 12:54:31 [INFO] Entrando en el método  Index() de la clase HomeController
+28/02/2024 12:54:34 [INFO] Entrando en el método Login() de la clase LoginController
+28/02/2024 12:54:38 [INFO] Entrando en el método ProcesarInicioSesion() de la clase LoginController
+28/02/2024 12:54:38 [INFO] Entrando en el método verificarCredenciales() de la clase UsuarioServicioImpl
+28/02/2024 12:54:38 [INFO] Entrando en el método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 12:54:38 [INFO] Saliendo del método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 12:54:40 [INFO] Saliendo del método verificarCredenciales() de la clase UsuarioServicioImpl
+28/02/2024 12:54:40 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:54:40 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:54:40 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:54:40 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:54:40 [INFO] Saliendo del método ProcesarInicioSesion() de la clase LoginController
+28/02/2024 12:54:40 [INFO] Entrando en el método Home() de la clase LoginController
+28/02/2024 12:54:43 [INFO] Entrando en el método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 12:54:43 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:54:43 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:54:43 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:54:43 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:54:43 [INFO] Saliendo del método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 12:54:47 [INFO] Entrando en el método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 12:54:47 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:54:47 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:54:47 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 12:54:47 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 12:54:47 [INFO] Entrando en el método registrarTienda() de la clase TiendaServicioImpl
+28/02/2024 12:54:48 [INFO] Entrando en el método tiendaToDao() de la clase ConvertirAdaoImpl
+28/02/2024 12:54:48 [INFO] Saliendo del método tiendaToDao() de la clase ConvertirAdaoImpl
+28/02/2024 12:54:48 [Error TiendaServicioImpl - registraTienda()] Error de persistencia al actualizar la bbdd: An error occurred while saving the entity changes. See the inner exception for details.
+28/02/2024 12:54:48 [INFO] Saliendo del método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 01:01:21 [INFO] Entrando en el método  Index() de la clase HomeController
+28/02/2024 01:01:25 [INFO] Entrando en el método Login() de la clase LoginController
+28/02/2024 01:01:29 [INFO] Entrando en el método ProcesarInicioSesion() de la clase LoginController
+28/02/2024 01:01:29 [INFO] Entrando en el método verificarCredenciales() de la clase UsuarioServicioImpl
+28/02/2024 01:01:29 [INFO] Entrando en el método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 01:01:29 [INFO] Saliendo del método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 01:01:31 [INFO] Saliendo del método verificarCredenciales() de la clase UsuarioServicioImpl. Username no encontrado
+28/02/2024 01:01:31 [INFO] Saliendo del método ProcesarInicioSesion() de la clase LoginController. Credenciales inválidas o cuenta no confirmada. Inténtelo de nuevo.
+28/02/2024 01:01:36 [INFO] Entrando en el método RegistrarGet() de la clase RegistroController
+28/02/2024 01:01:50 [INFO] Entrando en el método RegistrarPost() de la clase RegistroController
+28/02/2024 01:01:50 [INFO] Entrando en el método registrarUsuario() de la clase UsuarioServicioImpl
+28/02/2024 01:01:50 [INFO] Entrando en el método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 01:01:50 [INFO] Saliendo del método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 01:01:50 [INFO] Entrando en el método usuarioToDao() de la clase ConvertirAdaoImpl
+28/02/2024 01:01:50 [INFO] Saliendo del método usuarioToDao() de la clase ConvertirAdaoImpl
+28/02/2024 01:01:50 [INFO] Entrando en el método generarToken() de la clase UsuarioServicioImpl
+28/02/2024 01:01:50 [INFO] Saliendo del método generarToken() de la clase UsuarioServicioImpl
+28/02/2024 01:01:51 [INFO] Entrando en el método enviarEmailConfirmacion() de la clase ServicioEmailImpl
+28/02/2024 01:01:53 [INFO] Saliendo del método enviarEmailConfirmacion() de la clase ServicioEmailImpl
+28/02/2024 01:01:53 [INFO] Saliendo del método registrarUsuario() de la clase UsuarioServicioImpl
+28/02/2024 01:01:53 [INFO] Saliendo del método RegistrarGet() de la clase RegistroController. Registro del nuevo usuario OK
+28/02/2024 01:02:02 [INFO] Entrando en el método ConfirmarCuenta() de la clase LoginController
+28/02/2024 01:02:02 [INFO] Entrando en el método confirmarCuenta() de la clase UsuarioServicioImpl
+28/02/2024 01:02:03 [INFO] Saliendo del método confirmarCuenta() de la clase UsuarioServicioImpl. La cuenta no existe o ya está confirmada
+28/02/2024 01:02:03 [INFO] Saliendo del método ConfirmarCuenta() de la clase LoginController. El usuario ya estaba registrado y verificado
+28/02/2024 01:02:08 [INFO] Entrando en el método ProcesarInicioSesion() de la clase LoginController
+28/02/2024 01:02:08 [INFO] Entrando en el método verificarCredenciales() de la clase UsuarioServicioImpl
+28/02/2024 01:02:08 [INFO] Entrando en el método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 01:02:08 [INFO] Saliendo del método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 01:02:08 [INFO] Saliendo del método verificarCredenciales() de la clase UsuarioServicioImpl. El usuario no tiene la cuenta confirmada
+28/02/2024 01:02:08 [INFO] Saliendo del método ProcesarInicioSesion() de la clase LoginController. Credenciales inválidas o cuenta no confirmada. Inténtelo de nuevo.
+28/02/2024 01:02:12 [INFO] Entrando en el método ConfirmarCuenta() de la clase LoginController
+28/02/2024 01:02:12 [INFO] Entrando en el método confirmarCuenta() de la clase UsuarioServicioImpl
+28/02/2024 01:02:12 [INFO] Saliendo del método confirmarCuenta() de la clase UsuarioServicioImpl. Cuenta confirmada OK.
+28/02/2024 01:02:12 [INFO] Saliendo del método ConfirmarCuenta() de la clase LoginController. La dirección de correo ha sido confirmada correctamente
+28/02/2024 01:02:20 [INFO] Entrando en el método ProcesarInicioSesion() de la clase LoginController
+28/02/2024 01:02:20 [INFO] Entrando en el método verificarCredenciales() de la clase UsuarioServicioImpl
+28/02/2024 01:02:20 [INFO] Entrando en el método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 01:02:20 [INFO] Saliendo del método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 01:02:20 [INFO] Saliendo del método verificarCredenciales() de la clase UsuarioServicioImpl
+28/02/2024 01:02:20 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:02:20 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:02:20 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:02:20 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:02:20 [INFO] Saliendo del método ProcesarInicioSesion() de la clase LoginController
+28/02/2024 01:02:20 [INFO] Entrando en el método Home() de la clase LoginController
+28/02/2024 01:02:22 [INFO] Entrando en el método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 01:02:22 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:02:22 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:02:22 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:02:22 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:02:22 [INFO] Saliendo del método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 01:02:26 [INFO] Entrando en el método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 01:02:26 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:02:26 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:02:26 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:02:26 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:02:26 [INFO] Entrando en el método registrarTienda() de la clase TiendaServicioImpl
+28/02/2024 01:02:26 [INFO] Entrando en el método tiendaToDao() de la clase ConvertirAdaoImpl
+28/02/2024 01:02:26 [INFO] Saliendo del método tiendaToDao() de la clase ConvertirAdaoImpl
+28/02/2024 01:02:26 [Error TiendaServicioImpl - registraTienda()] Error de persistencia al actualizar la bbdd: An error occurred while saving the entity changes. See the inner exception for details.
+28/02/2024 01:02:26 [INFO] Saliendo del método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 01:09:13 [INFO] Entrando en el método  Index() de la clase HomeController
+28/02/2024 01:09:15 [INFO] Entrando en el método Login() de la clase LoginController
+28/02/2024 01:09:21 [INFO] Entrando en el método ProcesarInicioSesion() de la clase LoginController
+28/02/2024 01:09:21 [INFO] Entrando en el método verificarCredenciales() de la clase UsuarioServicioImpl
+28/02/2024 01:09:21 [INFO] Entrando en el método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 01:09:21 [INFO] Saliendo del método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 01:09:24 [INFO] Saliendo del método verificarCredenciales() de la clase UsuarioServicioImpl
+28/02/2024 01:09:24 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:09:24 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:09:24 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:09:24 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:09:24 [INFO] Saliendo del método ProcesarInicioSesion() de la clase LoginController
+28/02/2024 01:09:24 [INFO] Entrando en el método Home() de la clase LoginController
+28/02/2024 01:09:25 [INFO] Entrando en el método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 01:09:25 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:09:25 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:09:25 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:09:25 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:09:25 [INFO] Saliendo del método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 01:09:30 [INFO] Entrando en el método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 01:09:30 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:09:30 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:09:30 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:09:30 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:09:30 [INFO] Entrando en el método registrarTienda() de la clase TiendaServicioImpl
+28/02/2024 01:09:30 [INFO] Entrando en el método tiendaToDao() de la clase ConvertirAdaoImpl
+28/02/2024 01:09:30 [INFO] Saliendo del método tiendaToDao() de la clase ConvertirAdaoImpl
+28/02/2024 01:09:30 [INFO] Saliendo del método registraTienda() de la clase TiendaServicioImpl
+28/02/2024 01:09:30 [INFO] Saliendo del método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 01:09:54 [INFO] Entrando en el método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 01:09:54 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:09:54 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:09:54 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:09:54 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:09:54 [INFO] Saliendo del método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 01:09:58 [INFO] Entrando en el método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 01:09:58 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:09:58 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:09:58 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:09:58 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:09:58 [INFO] Entrando en el método registrarTienda() de la clase TiendaServicioImpl
+28/02/2024 01:09:58 [INFO] Entrando en el método tiendaToDao() de la clase ConvertirAdaoImpl
+28/02/2024 01:09:58 [INFO] Saliendo del método tiendaToDao() de la clase ConvertirAdaoImpl
+28/02/2024 01:09:58 [INFO] Saliendo del método registraTienda() de la clase TiendaServicioImpl
+28/02/2024 01:09:58 [INFO] Saliendo del método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 01:11:58 [INFO] Entrando en el método  Index() de la clase HomeController
+28/02/2024 01:12:00 [INFO] Entrando en el método Login() de la clase LoginController
+28/02/2024 01:12:04 [INFO] Entrando en el método ProcesarInicioSesion() de la clase LoginController
+28/02/2024 01:12:04 [INFO] Entrando en el método verificarCredenciales() de la clase UsuarioServicioImpl
+28/02/2024 01:12:04 [INFO] Entrando en el método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 01:12:04 [INFO] Saliendo del método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 01:12:06 [INFO] Saliendo del método verificarCredenciales() de la clase UsuarioServicioImpl
+28/02/2024 01:12:06 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:12:06 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:12:06 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:12:06 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:12:06 [INFO] Saliendo del método ProcesarInicioSesion() de la clase LoginController
+28/02/2024 01:12:06 [INFO] Entrando en el método Home() de la clase LoginController
+28/02/2024 01:12:10 [INFO] Entrando en el método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 01:12:10 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:12:10 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:12:10 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:12:10 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:12:10 [INFO] Saliendo del método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 01:12:14 [INFO] Entrando en el método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 01:12:14 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:12:14 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:12:14 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:12:14 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:12:14 [INFO] Entrando en el método registrarTienda() de la clase TiendaServicioImpl
+28/02/2024 01:12:14 [INFO] Entrando en el método tiendaToDao() de la clase ConvertirAdaoImpl
+28/02/2024 01:12:14 [INFO] Saliendo del método tiendaToDao() de la clase ConvertirAdaoImpl
+28/02/2024 01:12:15 [INFO] Saliendo del método registraTienda() de la clase TiendaServicioImpl
+28/02/2024 01:12:15 [INFO] Saliendo del método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 01:12:29 [INFO] Entrando en el método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 01:12:29 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:12:29 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:12:29 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:12:29 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:12:29 [INFO] Saliendo del método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 01:12:34 [INFO] Entrando en el método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 01:12:34 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:12:34 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:12:34 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:12:34 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:12:34 [INFO] Entrando en el método registrarTienda() de la clase TiendaServicioImpl
+28/02/2024 01:12:34 [INFO] Entrando en el método tiendaToDao() de la clase ConvertirAdaoImpl
+28/02/2024 01:12:34 [INFO] Saliendo del método tiendaToDao() de la clase ConvertirAdaoImpl
+28/02/2024 01:12:34 [INFO] Saliendo del método registraTienda() de la clase TiendaServicioImpl
+28/02/2024 01:12:34 [INFO] Saliendo del método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 01:20:09 [INFO] Entrando en el método  Index() de la clase HomeController
+28/02/2024 01:20:16 [INFO] Entrando en el método Login() de la clase LoginController
+28/02/2024 01:20:21 [INFO] Entrando en el método ProcesarInicioSesion() de la clase LoginController
+28/02/2024 01:20:21 [INFO] Entrando en el método verificarCredenciales() de la clase UsuarioServicioImpl
+28/02/2024 01:20:21 [INFO] Entrando en el método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 01:20:21 [INFO] Saliendo del método Encriptar() de la clase ServicioEncriptarImpl
+28/02/2024 01:20:23 [INFO] Saliendo del método verificarCredenciales() de la clase UsuarioServicioImpl
+28/02/2024 01:20:23 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:20:23 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:20:23 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:20:23 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:20:23 [INFO] Saliendo del método ProcesarInicioSesion() de la clase LoginController
+28/02/2024 01:20:23 [INFO] Entrando en el método Home() de la clase LoginController
+28/02/2024 01:20:25 [INFO] Entrando en el método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 01:20:25 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:20:25 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:20:25 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:20:25 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:20:25 [INFO] Saliendo del método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 01:20:29 [INFO] Entrando en el método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 01:20:29 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:20:29 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:20:29 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:20:29 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:20:29 [INFO] Entrando en el método registrarTienda() de la clase TiendaServicioImpl
+28/02/2024 01:20:29 [INFO] Entrando en el método tiendaToDao() de la clase ConvertirAdaoImpl
+28/02/2024 01:20:29 [INFO] Saliendo del método tiendaToDao() de la clase ConvertirAdaoImpl
+28/02/2024 01:20:30 [INFO] Saliendo del método registraTienda() de la clase TiendaServicioImpl
+28/02/2024 01:20:30 [INFO] Saliendo del método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 01:20:33 [INFO] Entrando en el método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 01:20:33 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:20:33 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:20:33 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:20:33 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:20:33 [INFO] Saliendo del método RegistrarTiendaGet() de la clase TiendasController
+28/02/2024 01:20:39 [INFO] Entrando en el método RegistrarTiendaPost() de la clase TiendasController
+28/02/2024 01:20:39 [INFO] Entrando en el método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:20:39 [INFO] Entrando en el método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:20:39 [INFO] Saliendo del método usuarioToDto() de la clase ConvertirAdtoImpl
+28/02/2024 01:20:39 [INFO] Saliendo del método obtenerUsuarioPorEmail() de la clase UsuarioServicioImpl
+28/02/2024 01:20:39 [INFO] Entrando en el método registrarTienda() de la clase TiendaServicioImpl
+28/02/2024 01:20:39 [INFO] Entrando en el método tiendaToDao() de la clase ConvertirAdaoImpl
+28/02/2024 01:20:39 [INFO] Saliendo del método tiendaToDao() de la clase ConvertirAdaoImpl
+28/02/2024 01:20:39 [INFO] Saliendo del método registraTienda() de la clase TiendaServicioImpl
+28/02/2024 01:20:39 [INFO] Saliendo del método RegistrarTiendaPost() de la clase TiendasController

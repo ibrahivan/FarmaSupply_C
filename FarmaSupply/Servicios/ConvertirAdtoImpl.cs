@@ -24,7 +24,23 @@ namespace FarmaSupply.Servicios
 
         public List<TiendaDTO> listaTiendaToDto(List<Tienda> listaTienda)
         {
-            throw new NotImplementedException();
+            try
+            {
+                EscribirLog.escribirEnFicheroLog("[INFO] Entrando en el método listaTiendaToDto() de la clase ConvertirAdtoImpl");
+                List<TiendaDTO> listaDto = new List<TiendaDTO>();
+                foreach (Tienda t in listaTienda)
+                {
+                    listaDto.Add(tiendaToDto(t));
+                }
+                EscribirLog.escribirEnFicheroLog("[INFO] Saliendo del método listaTiendaToDto() de la clase ConvertirAdtoImpl");
+                return listaDto;
+            }
+            catch (Exception e)
+            {
+                EscribirLog.escribirEnFicheroLog($"[ERROR ConvertirAdtoImpl - listaTiendaToDto()] - Error al convertir listaTiendaDAO a lista de listaTiendaDTO (return null): {e}");
+                Console.WriteLine("\n[ERROR TiendaToDtoImpl - listaTiendaToDto()] - Error al convertir listaTiendaDAO a listaTiendaDTOO (devolviendo null): " + e);
+            }
+            return null;
         }
 
         public List<UsuarioDTO> listaUsuarioToDto(List<Usuario> listaUsuario)
@@ -56,7 +72,28 @@ namespace FarmaSupply.Servicios
 
         public TiendaDTO tiendaToDto(Tienda t)
         {
-            throw new NotImplementedException();
+            try
+            {
+                EscribirLog.escribirEnFicheroLog("[INFO] Entrando en el método tiendaToDto() de la clase ConvertirAdtoImpl");
+
+
+                TiendaDTO dto = new TiendaDTO();
+                dto.Id = t.IdTienda;
+                dto.NombreTienda = t.NombreTienda;
+                dto.DireccionTienda = t.DireccionTienda;
+                dto.CodigopostalTienda = t.CodigopostalTienda;
+
+
+
+                EscribirLog.escribirEnFicheroLog("[INFO] Saliendo del método tiendaToDto() de la clase ConvertirAdtoImpl");
+                return dto;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("\n[ERROR TiendaToDtoImpl - tiendaToDto()] - Error al convertir tiendaDAO a tiendaDTO (return null): " + e);
+                EscribirLog.escribirEnFicheroLog($"[ERROR ConvertirAdtoImpl - tiendaToDto()] - Error al convertir tiendaDAO a tiendaDTO (return null): {e}");
+                return null;
+            }
         }
 
         public UsuarioDTO usuarioToDto(Usuario u)

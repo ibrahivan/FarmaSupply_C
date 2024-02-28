@@ -8,19 +8,17 @@ namespace FarmaSupply.DTO
     public class PedidoDTO
     {
         public long IdPedido { get; set; }
-        public string ProductoPedido { get; set; }
-        public Usuario IdUsuario_Ped { get; set; }
+        public string PrecioPedido { get; set; }
         public Tienda IdPedido_Tie { get; set; }
-        public int Cantidad { get; set; }
+        public List<CatalogoProducto> listaCtalogoProductos;
 
         public PedidoDTO() { }
 
-        public PedidoDTO(string productoPedido, Usuario idUsuario_Ped, Tienda idPedido_Tie, int cantidad)
+        public PedidoDTO(string precioPedido, Tienda idPedido_Tie, List<CatalogoProducto> listaCtalogoProductos)
         {
-            ProductoPedido = productoPedido;
-            IdUsuario_Ped = idUsuario_Ped;
+            PrecioPedido = precioPedido;
             IdPedido_Tie = idPedido_Tie;
-            Cantidad = cantidad;
+            this.listaCtalogoProductos = listaCtalogoProductos;
         }
     }
 }
